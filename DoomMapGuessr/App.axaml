@@ -1,0 +1,31 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="DoomMapGuessr.App"
+             RequestedThemeVariant="Default">
+	<!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+
+	<Application.Resources>
+		<ResourceDictionary>
+			<!-- fonts -->
+			<FontFamily x:Key="MaterialRounded">
+				avares://DoomMapGuessr/Assets/Fonts/material-rounded.ttf#Material Symbols Rounded Regular
+			</FontFamily>
+
+			<FontFamily x:Key="MaterialOutlined">
+				avares://DoomMapGuessr/Assets/Fonts/material-outline.ttf#Material Symbols Outlined Regular
+			</FontFamily>
+
+			<FontFamily x:Key="MaterialSharp">
+				avares://DoomMapGuessr/Assets/Fonts/material-sharp.ttf#Material Symbols Sharp Regular
+			</FontFamily>
+		</ResourceDictionary>
+	</Application.Resources>
+
+	<Application.Styles>
+		<FluentTheme />
+
+		<!-- Custom Styles -->
+		<StyleInclude Source="avares://DoomMapGuessr/Styles/NavigationButton.axaml" />
+	</Application.Styles>
+
+</Application>

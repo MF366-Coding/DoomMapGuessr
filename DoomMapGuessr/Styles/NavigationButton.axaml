@@ -1,0 +1,58 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<Design.PreviewWith>
+		<Border Padding="20">
+			<StackPanel Orientation="Vertical" Spacing="4">
+				<Button>Regular Button</Button>
+				<Button Classes="nav-button">Nav Button (Only text)</Button>
+				<Button Classes="nav-button nav-icon">&#xe834;</Button>
+				<Button Classes="nav-button nav-icon">terminal map cached downloading</Button>
+				<Button Classes="nav-button">
+					<TextBlock>
+						<Run Classes="nav-icon">&#xe834;</Run>
+						<Run Classes="nav-text">Icon by Unicode Entry Point (e834)</Run>
+					</TextBlock>
+				</Button>
+				<Button Classes="nav-button">
+					<TextBlock>
+						<Run Classes="nav-icon">TERMINAL</Run>
+						<Run Classes="nav-text">Icon by Name (terminal)</Run>
+					</TextBlock>
+				</Button>
+				<TextBlock>
+					A long text to demonstrate how the navigation button stretches.
+				</TextBlock>
+			</StackPanel>
+		</Border>
+	</Design.PreviewWith>
+
+	<!-- Full Button Styles -->
+	<Style Selector="Button.nav-button">
+		<Setter Property="Margin" Value="4" />
+		<Setter Property="Padding" Value="0" />
+		<Setter Property="HorizontalAlignment" Value="Stretch" />
+		<Setter Property="HorizontalContentAlignment" Value="Center" />
+	</Style>
+
+	<Style Selector="Button.nav-icon">
+		<Setter Property="FontFamily" Value="{StaticResource MaterialRounded}" />
+		<Setter Property="FontSize" Value="24" />
+		<Setter Property="FontWeight" Value="Bold" />
+	</Style>
+
+	<!-- Button Text Styles -->
+	<Style Selector="Button TextBlock">
+		<Setter Property="TextAlignment" Value="Center" />
+	</Style>
+
+	<Style Selector="Run.nav-icon">
+		<Setter Property="FontFamily" Value="{StaticResource MaterialRounded}" />
+		<Setter Property="FontSize" Value="28" />
+		<Setter Property="FontWeight" Value="Bold" />
+	</Style>
+
+	<Style Selector="Run.nav-text">
+		<Setter Property="FontFamily" Value="Inter" />
+		<Setter Property="BaselineAlignment" Value="Center" />
+	</Style>
+</Styles>
