@@ -26,6 +26,8 @@
 
 		<!-- Custom Styles -->
 		<StyleInclude Source="avares://DoomMapGuessr/Styles/NavigationButton.axaml" />
+		<StyleInclude Source="avares://DoomMapGuessr/Styles/Card.axaml" />
+		<StyleInclude Source="avares://DoomMapGuessr/Styles/TextStyles.axaml" />
 	</Application.Styles>
 
 </Application>

@@ -7,8 +7,25 @@
              x:Class="DoomMapGuessr.Views.SettingsPage"
              x:DataType="vm:SettingsPageViewModel">
 	<Design.DataContext>
-		<vm:SettingsPageViewModel/>
+		<vm:SettingsPageViewModel />
 	</Design.DataContext>
 
-	<TextBlock>This is the Settings page!</TextBlock>
+	<ScrollViewer>
+		<Grid RowDefinitions="Auto, Auto">
+			<StackPanel Grid.Row="0" Orientation="Horizontal" Spacing="4">
+				<TextBlock Classes="h1" TextAlignment="Center" FontFamily="{StaticResource MaterialRounded}">settings</TextBlock>
+				<TextBlock Classes="h1">Settings</TextBlock>
+			</StackPanel>
+			<Border Grid.Row="1" Classes="card">
+				<StackPanel Orientation="Vertical" Spacing="2">
+					<StackPanel Orientation="Horizontal" Spacing="4">
+						<TextBlock Classes="h2" FontFamily="{StaticResource MaterialRounded}">globe</TextBlock>
+						<TextBlock Classes="h2">Language</TextBlock>
+					</StackPanel>
+					<ToggleSwitch Margin="16,0,0,0" OnContent="Use system language if possible" OffContent="Use system language if possible"></ToggleSwitch>
+				</StackPanel>
+			</Border>
+		</Grid>
+	</ScrollViewer>
+
 </UserControl>

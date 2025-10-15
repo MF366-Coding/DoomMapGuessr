@@ -1,0 +1,59 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<Design.PreviewWith>
+		<Border Padding="20">
+			<StackPanel Orientation="Vertical" Margin="4">
+				<TextBlock Margin="4" Classes="display-size">This is a display.</TextBlock>
+				<TextBlock Margin="4" Classes="h1">This is an heading.</TextBlock>
+				<TextBlock Margin="4" Classes="h2">This is a sub-heading.</TextBlock>
+				<TextBlock Margin="4" Classes="h3">This is a sub-heading.</TextBlock>
+				<TextBlock Margin="4" Classes="body-strong">This is a strong body.</TextBlock>
+				<TextBlock Margin="4" Classes="body">This is body text.</TextBlock>
+				<TextBlock Margin="4" Classes="caption">This is caption text.</TextBlock>
+
+				<TextBlock Margin="4">This is the default text (same as body).</TextBlock>
+			</StackPanel>
+		</Border>
+	</Design.PreviewWith>
+
+	<!-- by default, it's "Body" -->
+	<Style Selector="TextBlock">
+		<Setter Property="FontSize" Value="12" />
+		<Setter Property="FontWeight" Value="Regular" />
+	</Style>
+
+	<Style Selector="TextBlock.display-size">
+		<Setter Property="FontSize" Value="48" />
+		<Setter Property="FontWeight" Value="ExtraBold" />
+	</Style>
+
+	<Style Selector="TextBlock.h1">
+		<Setter Property="FontSize" Value="28" />
+		<Setter Property="FontWeight" Value="Bold" />
+	</Style>
+
+	<Style Selector="TextBlock.h2">
+		<Setter Property="FontSize" Value="22" />
+		<Setter Property="FontWeight" Value="DemiBold" />
+	</Style>
+
+	<Style Selector="TextBlock.h3">
+		<Setter Property="FontSize" Value="18" />
+		<Setter Property="FontWeight" Value="DemiBold" />
+	</Style>
+
+	<Style Selector="TextBlock.body-strong">
+		<Setter Property="FontSize" Value="16" />
+		<Setter Property="FontWeight" Value="Bold" />
+	</Style>
+
+	<Style Selector="TextBlock.body">
+		<Setter Property="FontSize" Value="16" />
+		<Setter Property="FontWeight" Value="Regular" />
+	</Style>
+
+	<Style Selector="TextBlock.caption">
+		<Setter Property="FontSize" Value="12" />
+		<Setter Property="FontWeight" Value="Regular" />
+	</Style>
+</Styles>
