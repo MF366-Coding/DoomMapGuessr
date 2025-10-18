@@ -12,13 +12,25 @@
 				<TextBlock Margin="4" Classes="caption">This is caption text.</TextBlock>
 
 				<TextBlock Margin="4">This is the default text (same as body).</TextBlock>
+
+				<TextBlock Margin="4">
+					<Run>
+						A
+					</Run>
+					<Run FontFamily="{DynamicResource MaterialRounded}">
+						distance
+					</Run>
+					<Run>
+						B
+					</Run>
+				</TextBlock>
 			</StackPanel>
 		</Border>
 	</Design.PreviewWith>
 
 	<!-- by default, it's "Body" -->
 	<Style Selector="TextBlock">
-		<Setter Property="FontSize" Value="12" />
+		<Setter Property="FontSize" Value="16" />
 		<Setter Property="FontWeight" Value="Regular" />
 	</Style>
 
@@ -53,6 +65,21 @@
 	</Style>
 
 	<Style Selector="TextBlock.caption">
+		<Setter Property="FontSize" Value="12" />
+		<Setter Property="FontWeight" Value="Regular" />
+	</Style>
+
+	<Style Selector="ListBoxItem">
+		<Setter Property="FontSize" Value="12" />
+		<Setter Property="FontWeight" Value="Regular" />
+	</Style>
+
+	<Style Selector="ComboBox">
+		<Setter Property="FontSize" Value="12" />
+		<Setter Property="FontWeight" Value="Regular" />
+	</Style>
+
+	<Style Selector="ComboBoxItem">
 		<Setter Property="FontSize" Value="12" />
 		<Setter Property="FontWeight" Value="Regular" />
 	</Style>

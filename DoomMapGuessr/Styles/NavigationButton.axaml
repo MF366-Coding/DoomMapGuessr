@@ -4,6 +4,8 @@
 		<Border Padding="20">
 			<StackPanel Orientation="Vertical" Spacing="4">
 				<Button>Regular Button</Button>
+				<Button Classes="primary">Primary Button</Button>
+				<Button Classes="destructive">Destructive Button</Button>
 				<Button Classes="nav-button">Nav Button (Only text)</Button>
 				<Button Classes="nav-button nav-icon">&#xe834;</Button>
 				<Button Classes="nav-button nav-icon">terminal map cached downloading</Button>
@@ -41,9 +43,17 @@
 	</Style>
 
 	<!-- Button Text Styles -->
-	<Style Selector="Button TextBlock">
-		<Setter Property="TextAlignment" Value="Center" />
+	<Style Selector="Button.primary">
+		<Setter Property="Background" Value="{DynamicResource SystemAccentColor}" />
 	</Style>
+
+	<Style Selector="Button.destructive">
+		<Setter Property="Background" Value="Crimson" />
+	</Style>
+
+	<Style Selector="Button TextBlock">
+    		<Setter Property="TextAlignment" Value="Center" />
+    	</Style>
 
 	<Style Selector="Run.nav-icon">
 		<Setter Property="FontFamily" Value="{StaticResource MaterialRounded}" />
