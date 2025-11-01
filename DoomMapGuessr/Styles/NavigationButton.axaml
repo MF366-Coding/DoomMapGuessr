@@ -52,8 +52,8 @@
 	</Style>
 
 	<Style Selector="Button TextBlock">
-    		<Setter Property="TextAlignment" Value="Center" />
-    	</Style>
+		<Setter Property="TextAlignment" Value="Center" />
+	</Style>
 
 	<Style Selector="Run.nav-icon">
 		<Setter Property="FontFamily" Value="{StaticResource MaterialRounded}" />

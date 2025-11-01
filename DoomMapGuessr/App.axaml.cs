@@ -1,45 +1,65 @@
+using System;
 using System.Globalization;
+using System.Linq;
 
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Data.Core.Plugins;
-
-using System.Linq;
-
 using Avalonia.Markup.Xaml;
 
-using DoomMapGuessr.Helpers;
 using DoomMapGuessr.Services;
 using DoomMapGuessr.ViewModels;
 using DoomMapGuessr.Views;
-
-using IniParser.Model;
 
 
 namespace DoomMapGuessr
 {
 
-	public partial class App : Application
+	public class App : Application
 	{
 
-		public IniData Settings { get; private set; } = null!;
+		public static readonly string[] allowedCultures = [ "en-US", "pt-br", "pt-PT" ];
+		public static readonly string systemCulture = CultureInfo.CurrentCulture.Name;
+
+		private static void DisableAvaloniaDataAnnotationValidation()
+		{
+
+			// Get an array of plugins to remove
+			var dataValidationPluginsToRemove = BindingPlugins.DataValidators.OfType<DataAnnotationsValidationPlugin>().ToArray();
+
+			// remove each entry found
+			foreach (var plugin in dataValidationPluginsToRemove)
+				BindingPlugins.DataValidators.Remove(plugin);
+
+		}
+
+		private static void PrepareAppSettings()
+		{
+
+			// IMPORTANT: APPLICATION SETTINGS SETUP
+			if (!ApplicationSettings.Shared.Settings.Sections.ContainsSection("Language"))
+				ApplicationSettings.Shared.Settings.Sections.Add(new("Language"));
+
+			if (!ApplicationSettings.Shared.Settings["Language"].ContainsKey("Culture"))
+			{
+
+				ApplicationSettings.Shared.Settings["Language"]["Culture"] = allowedCultures.Contains(systemCulture, StringComparer.OrdinalIgnoreCase)
+																				 ? systemCulture
+																				 : allowedCultures[0];
+
+			}
+
+			ApplicationSettings.Shared.Save("config");
+
+		}
 
 		public override void Initialize() => AvaloniaXamlLoader.Load(this);
 
 		public override void OnFrameworkInitializationCompleted()
 		{
 
-			Settings = ApplicationSettings.Shared.GetResourceFile("{18D527F8-9848-4301-8049-DE4C679B7AEB}");
-
-			if (!Settings.Sections.ContainsSection("Language"))
-				Settings.Sections.Add(new("Language"));
-
-			if (!Settings["Language"].ContainsKey("Culture"))
-				Settings["Language"]["Culture"] = CultureInfo.CurrentCulture.Name;
-
-			Settings.Save("{18D527F8-9848-4301-8049-DE4C679B7AEB}");
-
-			Strings.Resources.Culture = new(Settings["Language"]["Culture"]);
+			PrepareAppSettings();
+			Strings.Resources.Culture = new(ApplicationSettings.Shared.Settings["Language"]["Culture"]);
 
 			if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
 			{
@@ -58,18 +78,6 @@ namespace DoomMapGuessr
 			}
 
 			base.OnFrameworkInitializationCompleted();
-
-		}
-
-		private static void DisableAvaloniaDataAnnotationValidation()
-		{
-
-			// Get an array of plugins to remove
-			var dataValidationPluginsToRemove = BindingPlugins.DataValidators.OfType<DataAnnotationsValidationPlugin>().ToArray();
-
-			// remove each entry found
-			foreach (var plugin in dataValidationPluginsToRemove)
-				BindingPlugins.DataValidators.Remove(plugin);
 
 		}
 

@@ -1,11 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-
-<root>
-    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <xsd:element name="root" msdata:IsDataSet="true">
-            
-        </xsd:element>
-    </xsd:schema>
+﻿<root>
     <resheader name="resmimetype">
         <value>text/microsoft-resx</value>
     </resheader>
@@ -18,11 +11,23 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
+    <data name="AppCreatorName" xml:space="preserve">
+        <value>MF366</value>
+    </data>
+    <data name="AppInterface" xml:space="preserve">
+        <value>GUI</value>
+    </data>
+    <data name="AppLanguageSettingsField" xml:space="preserve">
+        <value>Idioma do Aplicativo:</value>
+    </data>
+    <data name="AppSlogan" xml:space="preserve">
+        <value>GeoGuessr do DOOM.</value>
+    </data>
     <data name="AppTitleName" xml:space="preserve">
         <value>DoomMapGuessr</value>
     </data>
-    <data name="AppCreatorName" xml:space="preserve">
-        <value>MF366</value>
+    <data name="FollowSystemTheme" xml:space="preserve">
+        <value>Usar tema do sistema</value>
     </data>
     <data name="GreetingText" xml:space="preserve">
         <value>Olá, mundo!</value>
@@ -30,28 +35,16 @@
     <data name="Home" xml:space="preserve">
         <value>Início</value>
     </data>
-    <data name="Settings" xml:space="preserve">
-        <value>Definições</value>
-    </data>
     <data name="Language" xml:space="preserve">
         <value>Idioma</value>
     </data>
-    <data name="AppSlogan" xml:space="preserve">
-        <value>O GeoGuessr do DOOM.</value>
-    </data>
-    <data name="AppLanguageSettingsField" xml:space="preserve">
-        <value>Idioma da Aplicação:</value>
-    </data>
     <data name="SameAsSystemOption" xml:space="preserve">
-        <value>Igual ao do sistema</value>
+        <value>Mesmo do sistema</value>
     </data>
-    <data name="AppInterface" xml:space="preserve">
-        <value>Interface de Utilizador</value>
-    </data>
-    <data name="FollowSystemTheme" xml:space="preserve">
-        <value>Usar o tema do sistema</value>
+    <data name="Settings" xml:space="preserve">
+        <value>Configurações</value>
     </data>
     <data name="ThemingDarkMode" xml:space="preserve">
-        <value>Modo Escuro</value>
+        <value>Tema Escuro</value>
     </data>
 </root>

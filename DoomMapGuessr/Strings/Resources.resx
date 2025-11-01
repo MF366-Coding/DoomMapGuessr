@@ -27,4 +27,31 @@
     <data name="GreetingText" xml:space="preserve">
         <value>Hello, world!</value>
     </data>
+    <data name="Home" xml:space="preserve">
+        <value>Home</value>
+    </data>
+    <data name="Settings" xml:space="preserve">
+        <value>Settings</value>
+    </data>
+    <data name="Language" xml:space="preserve">
+        <value>Language</value>
+    </data>
+    <data name="AppSlogan" xml:space="preserve">
+        <value>The GeoGuessr of Doom.</value>
+    </data>
+    <data name="AppLanguageSettingsField" xml:space="preserve">
+        <value>App Language:</value>
+    </data>
+    <data name="SameAsSystemOption" xml:space="preserve">
+        <value>Follow system</value>
+    </data>
+    <data name="AppInterface" xml:space="preserve">
+        <value>App Interface</value>
+    </data>
+    <data name="FollowSystemTheme" xml:space="preserve">
+        <value>Follow system theme</value>
+    </data>
+    <data name="ThemingDarkMode" xml:space="preserve">
+        <value>Dark Mode</value>
+    </data>
 </root>
