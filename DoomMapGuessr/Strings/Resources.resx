@@ -1,57 +1,121 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <root>
-    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <xsd:element name="root" msdata:IsDataSet="true">
-            
-        </xsd:element>
-    </xsd:schema>
-    <resheader name="resmimetype">
-        <value>text/microsoft-resx</value>
-    </resheader>
-    <resheader name="version">
-        <value>1.3</value>
-    </resheader>
-    <resheader name="reader">
-        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-    </resheader>
-    <resheader name="writer">
-        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-    </resheader>
-    <data name="AppTitleName" xml:space="preserve">
+	<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	            xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	            id="root"
+	            xmlns="">
+		<xsd:element name="root"
+		             msdata:IsDataSet="true">
+
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>1.3</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral,
+			PublicKeyToken=b77a5c561934e089
+		</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral,
+			PublicKeyToken=b77a5c561934e089
+		</value>
+	</resheader>
+	<data name="App_TitleName"
+	      xml:space="preserve">
         <value>DoomMapGuessr</value>
     </data>
-    <data name="AppCreatorName" xml:space="preserve">
+	<data name="App_CreatorName"
+	      xml:space="preserve">
         <value>MF366 (Matthew)</value>
     </data>
-    <data name="GreetingText" xml:space="preserve">
+	<data name="GreetingText"
+	      xml:space="preserve">
         <value>Hello, world!</value>
     </data>
-    <data name="Home" xml:space="preserve">
+	<data name="Home"
+	      xml:space="preserve">
         <value>Home</value>
     </data>
-    <data name="Settings" xml:space="preserve">
+	<data name="Settings"
+	      xml:space="preserve">
         <value>Settings</value>
     </data>
-    <data name="Language" xml:space="preserve">
+	<data name="Language"
+	      xml:space="preserve">
         <value>Language</value>
     </data>
-    <data name="AppSlogan" xml:space="preserve">
+	<data name="App_Slogan"
+	      xml:space="preserve">
         <value>The GeoGuessr of Doom.</value>
     </data>
-    <data name="AppLanguageSettingsField" xml:space="preserve">
+	<data name="Settings_Language_InputFieldTitle"
+	      xml:space="preserve">
         <value>App Language:</value>
     </data>
-    <data name="SameAsSystemOption" xml:space="preserve">
+	<data name="Settings_Language_FollowSystem"
+	      xml:space="preserve">
         <value>Follow system</value>
     </data>
-    <data name="AppInterface" xml:space="preserve">
+	<data name="Settings_AppInterface"
+	      xml:space="preserve">
         <value>App Interface</value>
     </data>
-    <data name="FollowSystemTheme" xml:space="preserve">
-        <value>Follow system theme</value>
-    </data>
-    <data name="ThemingDarkMode" xml:space="preserve">
+	<data name="Settings_GUI_ThemingDarkMode"
+		xml:space="preserve">
         <value>Dark Mode</value>
     </data>
+	<data name="Settings_GUI_UseCustomTheme" xml:space="preserve">
+		<value>Use custom theme</value>
+	</data>
+	<data name="Settings_DoomScreenshots" xml:space="preserve">
+		<value>Gameplay Screenshots</value>
+	</data>
+	<data name="Settings_AspectRatio" xml:space="preserve">
+		<value>Aspect Ratio</value>
+	</data>
+	<data name="Settings_AspectRatio_MaintainProportions" xml:space="preserve">
+		<value>Maintain Proportions</value>
+	</data>
+	<data name="Color" xml:space="preserve">
+		<value>Color</value>
+	</data>
+	<data name="Settings_Color_MaintainColor" xml:space="preserve">
+		<value>Original Color</value>
+	</data>
+	<data name="Settings_Color_Achromatopsia" xml:space="preserve">
+		<value>Achromatopsia (monochromacy)</value>
+	</data>
+	<data name="Settings_Color_Tritanopia" xml:space="preserve">
+		<value>Tritanopia (blue-blindness)</value>
+	</data>
+	<data name="Settings_Color_Protanopia" xml:space="preserve">
+		<value>Protanopia (red-blindness)</value>
+	</data>
+	<data name="Settings_Color_Deuteranopia" xml:space="preserve">
+		<value>Deuteranopia (green-blindness)</value>
+	</data>
+	<data name="Settings_DoomScreenshots_SourcesBlacklist" xml:space="preserve">
+		<value>Screenshot Source Blacklist</value>
+	</data>
+	<data name="Add" xml:space="preserve">
+		<value>Add</value>
+	</data>
+	<data name="Remove" xml:space="preserve">
+		<value>Remove</value>
+	</data>
+	<data name="RemoveAll" xml:space="preserve">
+		<value>Remove All</value>
+	</data>
+	<data name="Edit" xml:space="preserve">
+		<value>Edit</value>
+	</data>
+	<data name="Save" xml:space="preserve">
+		<value>Save</value>
+	</data>
 </root>

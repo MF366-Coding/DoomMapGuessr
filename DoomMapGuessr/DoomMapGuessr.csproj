@@ -33,7 +33,7 @@
 		</Compile>
 
 		<EmbeddedResource Update="Strings\Resources.pt-PT.resx">
-		  <DependentUpon>Resources.resx</DependentUpon>
+			<DependentUpon>Resources.resx</DependentUpon>
 		</EmbeddedResource>
 	</ItemGroup>
 
@@ -55,6 +55,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <UpToDateCheckInput Remove="Resources\Fonts.axaml" />
+		<UpToDateCheckInput Remove="Resources\Fonts.axaml" />
 	</ItemGroup>
 </Project>

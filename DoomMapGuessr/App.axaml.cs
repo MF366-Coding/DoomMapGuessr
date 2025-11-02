@@ -6,6 +6,7 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Data.Core.Plugins;
 using Avalonia.Markup.Xaml;
+using Avalonia.Styling;
 
 using DoomMapGuessr.Services;
 using DoomMapGuessr.ViewModels;
@@ -18,7 +19,7 @@ namespace DoomMapGuessr
 	public class App : Application
 	{
 
-		public static readonly string[] allowedCultures = [ "en-US", "pt-br", "pt-PT" ];
+		public static readonly string[] allowedCultures = [ "en-US", "pt-br", "pt-PT", "sk-sk" ];
 		public static readonly string systemCulture = CultureInfo.CurrentCulture.Name;
 
 		private static void DisableAvaloniaDataAnnotationValidation()
@@ -40,6 +41,9 @@ namespace DoomMapGuessr
 			if (!ApplicationSettings.Shared.Settings.Sections.ContainsSection("Language"))
 				ApplicationSettings.Shared.Settings.Sections.Add(new("Language"));
 
+			if (!ApplicationSettings.Shared.Settings.Sections.ContainsSection("GUI"))
+				ApplicationSettings.Shared.Settings.Sections.Add(new("GUI"));
+
 			if (!ApplicationSettings.Shared.Settings["Language"].ContainsKey("Culture"))
 			{
 
@@ -48,6 +52,12 @@ namespace DoomMapGuessr
 																				 : allowedCultures[0];
 
 			}
+
+			if (!ApplicationSettings.Shared.Settings["GUI"].ContainsKey("FollowSystem"))
+				ApplicationSettings.Shared.Settings["GUI"]["FollowSystem"] = "1";
+
+			if (!ApplicationSettings.Shared.Settings["GUI"].ContainsKey("DarkMode"))
+				ApplicationSettings.Shared.Settings["GUI"]["DarkMode"] = "1";
 
 			ApplicationSettings.Shared.Save("config");
 
@@ -59,6 +69,12 @@ namespace DoomMapGuessr
 		{
 
 			PrepareAppSettings();
+
+			RequestedThemeVariant = ApplicationSettings.Shared.Settings["GUI"]["FollowSystem"] == "1"
+										? ThemeVariant.Default
+										: (ApplicationSettings.Shared.Settings["GUI"]["DarkMode"] == "1"
+											   ? ThemeVariant.Dark
+											   : ThemeVariant.Light);
 			Strings.Resources.Culture = new(ApplicationSettings.Shared.Settings["Language"]["Culture"]);
 
 			if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)

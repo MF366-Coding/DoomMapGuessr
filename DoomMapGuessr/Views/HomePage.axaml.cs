@@ -1,6 +1,4 @@
-﻿using Avalonia;
-using Avalonia.Controls;
-using Avalonia.Markup.Xaml;
+﻿using Avalonia.Controls;
 
 
 namespace DoomMapGuessr.Views
@@ -14,4 +12,3 @@ namespace DoomMapGuessr.Views
 	}
 
 }
-

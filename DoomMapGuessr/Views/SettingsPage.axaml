@@ -11,14 +11,14 @@
 		<vm:SettingsPageViewModel />
 	</Design.DataContext>
 
-	<Grid RowDefinitions="*, Auto">
-		<ScrollViewer Grid.Row="0">
-			<Grid RowDefinitions="Auto, Auto, Auto, Auto, *">
-				<StackPanel Grid.Row="0" Orientation="Horizontal" Spacing="4">
-					<TextBlock Classes="h1" TextAlignment="Center" FontFamily="{StaticResource MaterialRounded}">settings</TextBlock>
-					<TextBlock Classes="h1" Text="{x:Static strings:Resources.Settings}" />
-				</StackPanel>
-				<Border Grid.Row="1" Classes="card">
+	<Grid RowDefinitions="Auto, *, Auto">
+		<StackPanel Grid.Row="0" Margin="4"  Orientation="Horizontal" Spacing="4">
+			<TextBlock Classes="h1" TextAlignment="Center" FontFamily="{StaticResource MaterialRounded}">settings</TextBlock>
+			<TextBlock Classes="h1" Text="{x:Static strings:Resources.Settings}" />
+		</StackPanel>
+		<ScrollViewer Grid.Row="1">
+			<Grid RowDefinitions="Auto, Auto, Auto, *">
+				<Border Grid.Row="0" Classes="card">
 					<StackPanel Orientation="Vertical" Spacing="2">
 						<StackPanel Orientation="Horizontal" Spacing="4">
 							<TextBlock Classes="h2" FontFamily="{StaticResource MaterialRounded}">globe</TextBlock>
@@ -26,51 +26,61 @@
 						</StackPanel>
 						<StackPanel Orientation="Horizontal" Spacing="8">
 							<TextBlock Margin="24,8,0,0" VerticalAlignment="Center" TextAlignment="Right"
-							           Text="{x:Static strings:Resources.AppLanguageSettingsField}" />
-							<ComboBox Margin="0,8,0,0" SelectedIndex="{Binding CurrentIndex}" ItemsSource="{Binding LanguageComboBoxItems}"
-							          SelectionChanged="SelectingItemsControl_OnSelectionChanged">
-							</ComboBox>
+							           Text="{x:Static strings:Resources.Settings_Language_InputFieldTitle}" />
+							<ComboBox Margin="0,8,0,0" SelectedIndex="{Binding CurrentIndex}" ItemsSource="{Binding LanguageComboBoxItems}" />
+						</StackPanel>
+					</StackPanel>
+				</Border>
+				<Border Grid.Row="1" Classes="card">
+					<StackPanel Orientation="Vertical" Spacing="2">
+						<StackPanel Orientation="Horizontal" Spacing="4">
+							<TextBlock Classes="h2" FontFamily="{StaticResource MaterialRounded}">brush</TextBlock>
+							<TextBlock Classes="h2" Text="{x:Static strings:Resources.Settings_AppInterface}" />
+						</StackPanel>
+						<StackPanel Orientation="Vertical" Spacing="8">
+							<ToggleSwitch Margin="24,8,0,0" OnContent="{x:Static strings:Resources.Settings_GUI_UseCustomTheme}"
+							              OffContent="{x:Static strings:Resources.Settings_GUI_UseCustomTheme}"
+							              IsChecked="{Binding CustomTheme}" />
+							<ToggleSwitch Name="DarkModeToggleSwitch" Margin="48,0,0,0"
+							              OnContent="{x:Static strings:Resources.Settings_GUI_ThemingDarkMode}"
+							              OffContent="{x:Static strings:Resources.Settings_GUI_ThemingDarkMode}"
+							              IsChecked="{Binding DarkMode}"
+							              IsEnabled="{Binding CustomTheme}" />
 						</StackPanel>
 					</StackPanel>
 				</Border>
 				<Border Grid.Row="2" Classes="card">
 					<StackPanel Orientation="Vertical" Spacing="2">
 						<StackPanel Orientation="Horizontal" Spacing="4">
-							<TextBlock Classes="h2" FontFamily="{StaticResource MaterialRounded}">brush</TextBlock>
-							<TextBlock Classes="h2" Text="{x:Static strings:Resources.AppInterface}"></TextBlock>
-						</StackPanel>
-						<StackPanel Orientation="Vertical" Spacing="8">
-							<ToggleSwitch Margin="24,8,0,0" OnContent="{x:Static strings:Resources.FollowSystemTheme}"
-							              OffContent="{x:Static strings:Resources.FollowSystemTheme}" />
-							<ToggleSwitch Name="DarkModeToggleSwitch" Margin="48,0,0,0"
-							              OnContent="{x:Static strings:Resources.ThemingDarkMode}"
-							              OffContent="{x:Static strings:Resources.ThemingDarkMode}">
-							</ToggleSwitch>
-						</StackPanel>
-					</StackPanel>
-				</Border>
-				<Border Grid.Row="3" Classes="card">
-					<StackPanel Orientation="Vertical" Spacing="2">
-						<StackPanel Orientation="Horizontal" Spacing="4">
 							<TextBlock Classes="h2" FontFamily="{StaticResource MaterialRounded}">image</TextBlock>
-							<TextBlock Classes="h2">Screenshots</TextBlock>
+							<TextBlock Classes="h2" Text="{x:Static strings:Resources.Settings_DoomScreenshots}" />
 						</StackPanel>
-						<TextBlock Classes="h3" Margin="24,8,0,8">Aspect Ratio</TextBlock>
+						<TextBlock Classes="h3" Margin="24,8,0,8" Text="{x:Static strings:Resources.Settings_AspectRatio}" />
 						<StackPanel Orientation="Horizontal" Spacing="8">
-							<RadioButton Margin="48,0,0,0" VerticalAlignment="Center">Maintain Proportions</RadioButton>
+							<RadioButton Margin="48,0,0,0" VerticalAlignment="Center"
+							             Content="{x:Static strings:Resources.Settings_AspectRatio_MaintainProportions}" />
 							<RadioButton Margin="48,0,0,0" VerticalAlignment="Center">16:9</RadioButton>
 							<RadioButton Margin="48,0,0,0" VerticalAlignment="Center">4:3</RadioButton>
 							<RadioButton Margin="48,0,0,0" VerticalAlignment="Center">1:1</RadioButton>
 						</StackPanel>
-						<TextBlock Classes="h3" Margin="24,8,0,8">Color</TextBlock>
+						<TextBlock Classes="h3" Margin="24,8,0,8" Text="{x:Static strings:Resources.Color}" />
 						<StackPanel Orientation="Vertical" Spacing="8">
-							<RadioButton Margin="48,0,0,0" VerticalAlignment="Center">Maintain Color</RadioButton>
-							<RadioButton Margin="48,0,0,0" VerticalAlignment="Center">Deuteranopia (green-blindness)</RadioButton>
-							<RadioButton Margin="48,0,0,0" VerticalAlignment="Center">Protanopia (red-blindness)</RadioButton>
-							<RadioButton Margin="48,0,0,0" VerticalAlignment="Center">Tritanopia (blue-blindness)</RadioButton>
-							<RadioButton Margin="48,0,0,0" VerticalAlignment="Center">Achromatopsia (monochromacy)</RadioButton>
+							<RadioButton Margin="48,0,0,0" VerticalAlignment="Center"
+							             Content="{x:Static strings:Resources.Settings_Color_MaintainColor}" />
+							<RadioButton Margin="48,0,0,0" VerticalAlignment="Center"
+							             Content="{x:Static strings:Resources.Settings_Color_Protanopia}">
+							</RadioButton>
+							<RadioButton Margin="48,0,0,0" VerticalAlignment="Center"
+							             Content="{x:Static strings:Resources.Settings_Color_Deuteranopia}">
+							</RadioButton>
+							<RadioButton Margin="48,0,0,0" VerticalAlignment="Center"
+							             Content="{x:Static strings:Resources.Settings_Color_Tritanopia}">
+							</RadioButton>
+							<RadioButton Margin="48,0,0,0" VerticalAlignment="Center"
+							             Content="{x:Static strings:Resources.Settings_Color_Achromatopsia}">
+							</RadioButton>
 						</StackPanel>
-						<TextBlock Classes="h3" Margin="24,8,0,8">Block Screenshot Sources</TextBlock>
+						<TextBlock Classes="h3" Margin="24,8,0,8" Text="{x:Static strings:Resources.Settings_DoomScreenshots_SourcesBlacklist}"></TextBlock>
 						<StackPanel Orientation="Vertical" Spacing="8" Margin="48,0,0,0">
 							<ListBox MinWidth="50" CornerRadius="10">
 								<ListBoxItem>google.com</ListBoxItem>
@@ -78,26 +88,26 @@
 							<Grid ColumnDefinitions="Auto, Auto, *, Auto, Auto">
 								<Button Grid.Column="0" Margin="4">
 									<TextBlock Classes="body">
-										<Run FontFamily="{StaticResource MaterialRounded}">&#xf3dd;</Run>
-										<Run>Add</Run>
+										<Run Classes="icon">&#xf3dd;</Run>
+										<Run Classes="icon-text" Text="{x:Static strings:Resources.Add}" />
 									</TextBlock>
 								</Button>
 								<Button Grid.Column="1" Margin="4">
 									<TextBlock Classes="body">
-										<Run FontFamily="{StaticResource MaterialRounded}">edit</Run>
-										<Run>Edit</Run>
+										<Run Classes="icon">edit</Run>
+										<Run Classes="icon-text" Text="{x:Static strings:Resources.Edit}" />
 									</TextBlock>
 								</Button>
 								<Button Grid.Column="3" Margin="4">
 									<TextBlock Classes="body">
-										<Run FontFamily="{StaticResource MaterialRounded}">delete</Run>
-										<Run>Remove</Run>
+										<Run Classes="icon">delete</Run>
+										<Run Classes="icon-text" Text="{x:Static strings:Resources.Remove}" />
 									</TextBlock>
 								</Button>
 								<Button Grid.Column="4" Classes="destructive" Margin="4">
 									<TextBlock Classes="body">
-										<Run FontFamily="{StaticResource MaterialRounded}">mop</Run>
-										<Run>Remove All</Run>
+										<Run Classes="icon">mop</Run>
+										<Run Classes="icon-text" Text="{x:Static strings:Resources.RemoveAll}" />
 									</TextBlock>
 								</Button>
 							</Grid>
@@ -106,7 +116,12 @@
 				</Border>
 			</Grid>
 		</ScrollViewer>
-		<Button Grid.Row="1" Classes="primary" Margin="8" HorizontalAlignment="Right" Command="{Binding SaveSettingsCommand}"><TextBlock>Save</TextBlock></Button>
+		<Button Grid.Row="2" Classes="primary" Margin="8" HorizontalAlignment="Right" Command="{Binding SaveSettingsCommand}">
+			<TextBlock Classes="body">
+				<Run Classes="icon">save</Run>
+				<Run Classes="icon-text" Text="{x:Static strings:Resources.Save}" />
+			</TextBlock>
+		</Button>
 	</Grid>
 
 </UserControl>

@@ -60,56 +60,56 @@ namespace DoomMapGuessr.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add.
+        /// </summary>
+        public static string Add {
+            get {
+                return ResourceManager.GetString("Add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to MF366 (Matthew).
         /// </summary>
-        public static string AppCreatorName {
+        public static string App_CreatorName {
             get {
-                return ResourceManager.GetString("AppCreatorName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to App Interface.
-        /// </summary>
-        public static string AppInterface {
-            get {
-                return ResourceManager.GetString("AppInterface", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to App Language:.
-        /// </summary>
-        public static string AppLanguageSettingsField {
-            get {
-                return ResourceManager.GetString("AppLanguageSettingsField", resourceCulture);
+                return ResourceManager.GetString("App_CreatorName", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to The GeoGuessr of Doom..
         /// </summary>
-        public static string AppSlogan {
+        public static string App_Slogan {
             get {
-                return ResourceManager.GetString("AppSlogan", resourceCulture);
+                return ResourceManager.GetString("App_Slogan", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to DoomMapGuessr.
         /// </summary>
-        public static string AppTitleName {
+        public static string App_TitleName {
             get {
-                return ResourceManager.GetString("AppTitleName", resourceCulture);
+                return ResourceManager.GetString("App_TitleName", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Follow system theme.
+        ///   Looks up a localized string similar to Color.
         /// </summary>
-        public static string FollowSystemTheme {
+        public static string Color {
             get {
-                return ResourceManager.GetString("FollowSystemTheme", resourceCulture);
+                return ResourceManager.GetString("Color", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        public static string Edit {
+            get {
+                return ResourceManager.GetString("Edit", resourceCulture);
             }
         }
         
@@ -141,11 +141,29 @@ namespace DoomMapGuessr.Strings {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Follow system.
+        ///   Looks up a localized string similar to Remove.
         /// </summary>
-        public static string SameAsSystemOption {
+        public static string Remove {
             get {
-                return ResourceManager.GetString("SameAsSystemOption", resourceCulture);
+                return ResourceManager.GetString("Remove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove All.
+        /// </summary>
+        public static string RemoveAll {
+            get {
+                return ResourceManager.GetString("RemoveAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        public static string Save {
+            get {
+                return ResourceManager.GetString("Save", resourceCulture);
             }
         }
         
@@ -159,11 +177,128 @@ namespace DoomMapGuessr.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to App Interface.
+        /// </summary>
+        public static string Settings_AppInterface {
+            get {
+                return ResourceManager.GetString("Settings_AppInterface", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Aspect Ratio.
+        /// </summary>
+        public static string Settings_AspectRatio {
+            get {
+                return ResourceManager.GetString("Settings_AspectRatio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Maintain Proportions.
+        /// </summary>
+        public static string Settings_AspectRatio_MaintainProportions {
+            get {
+                return ResourceManager.GetString("Settings_AspectRatio_MaintainProportions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Achromatopsia (monochromacy).
+        /// </summary>
+        public static string Settings_Color_Achromatopsia {
+            get {
+                return ResourceManager.GetString("Settings_Color_Achromatopsia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deuteranopia (green-blindness).
+        /// </summary>
+        public static string Settings_Color_Deuteranopia {
+            get {
+                return ResourceManager.GetString("Settings_Color_Deuteranopia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Original Color.
+        /// </summary>
+        public static string Settings_Color_MaintainColor {
+            get {
+                return ResourceManager.GetString("Settings_Color_MaintainColor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Protanopia (red-blindness).
+        /// </summary>
+        public static string Settings_Color_Protanopia {
+            get {
+                return ResourceManager.GetString("Settings_Color_Protanopia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tritanopia (blue-blindness).
+        /// </summary>
+        public static string Settings_Color_Tritanopia {
+            get {
+                return ResourceManager.GetString("Settings_Color_Tritanopia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gameplay Screenshots.
+        /// </summary>
+        public static string Settings_DoomScreenshots {
+            get {
+                return ResourceManager.GetString("Settings_DoomScreenshots", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Screenshot Source Blacklist.
+        /// </summary>
+        public static string Settings_DoomScreenshots_SourcesBlacklist {
+            get {
+                return ResourceManager.GetString("Settings_DoomScreenshots_SourcesBlacklist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Dark Mode.
         /// </summary>
-        public static string ThemingDarkMode {
+        public static string Settings_GUI_ThemingDarkMode {
             get {
-                return ResourceManager.GetString("ThemingDarkMode", resourceCulture);
+                return ResourceManager.GetString("Settings_GUI_ThemingDarkMode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Use custom theme.
+        /// </summary>
+        public static string Settings_GUI_UseCustomTheme {
+            get {
+                return ResourceManager.GetString("Settings_GUI_UseCustomTheme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Follow system.
+        /// </summary>
+        public static string Settings_Language_FollowSystem {
+            get {
+                return ResourceManager.GetString("Settings_Language_FollowSystem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to App Language:.
+        /// </summary>
+        public static string Settings_Language_InputFieldTitle {
+            get {
+                return ResourceManager.GetString("Settings_Language_InputFieldTitle", resourceCulture);
             }
         }
     }

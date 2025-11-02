@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Linq;
 
-using Avalonia.Controls;
+using Avalonia;
+using Avalonia.Styling;
 
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 
 using DoomMapGuessr.Services;
+using DoomMapGuessr.Strings;
 
 
 namespace DoomMapGuessr.ViewModels
@@ -20,24 +22,52 @@ namespace DoomMapGuessr.ViewModels
 								   1;
 
 		[ObservableProperty]
-		private string[] languageComboBoxItems =
-		[
-			Strings.Resources.SameAsSystemOption, "English (USA)", "Português (Brasil)", "Português (Portugal)"
-		];
+		private bool customTheme = ApplicationSettings.Shared.Settings["GUI"]["FollowSystem"] == "0";
+
+		[ObservableProperty]
+		private bool darkMode = ApplicationSettings.Shared.Settings["GUI"]["DarkMode"] == "1";
+
+		[ObservableProperty]
+		private string[] languageComboBoxItems = [ Resources.Settings_Language_FollowSystem, "English (USA)", "Português (Brasil)", "Português (Portugal)", "Slovenský (Slovensko)" ];
+
+		private void RunLanguageChangeProtocol() =>
+			ApplicationSettings.Shared.Settings["Language"]["Culture"] = CurrentIndex == 0 // same as system
+																			 ? App.allowedCultures.Contains(
+																				   App.systemCulture,
+																				   StringComparer.OrdinalIgnoreCase // same as system is allowed
+																			   )
+																				   ? App.systemCulture      // same as system
+																				   : App.allowedCultures[0] // en-US
+																			 : App.allowedCultures[CurrentIndex - 1];
+
+		private void RunThemeChangeProtocol()
+		{
+
+			ApplicationSettings.Shared.Settings["GUI"]["FollowSystem"] = CustomTheme ? "0" : "1";
+			ApplicationSettings.Shared.Settings["GUI"]["DarkMode"] = DarkMode ? "1" : "0";
+
+			if (Application.Current is not null)
+			{
+
+				Application.Current.RequestedThemeVariant = !CustomTheme
+																? ThemeVariant.Default
+																: (DarkMode
+																	   ? ThemeVariant.Dark
+																	   : ThemeVariant.Light);
+
+			}
+
+		}
 
 		[RelayCommand]
-		private void SaveSettings() => ApplicationSettings.Shared.Save("config");
+		private void SaveSettings()
+		{
 
-		public void RunLanguageChangeProtocol(SelectionChangedEventArgs args) =>
-			ApplicationSettings.Shared.Settings["Language"]["Culture"] = CurrentIndex == 0 // same as system
-																			 ? (App.allowedCultures.Contains(
-																					App.systemCulture,
-																					StringComparer.OrdinalIgnoreCase // same as system is allowed
-																				)
-																					? App.systemCulture       // same as system
-																					: App.allowedCultures[0]) // en-US
-																			 : App.allowedCultures
-																				 [CurrentIndex - 1];
+			RunLanguageChangeProtocol();
+			RunThemeChangeProtocol();
+			ApplicationSettings.Shared.Save("config");
+
+		}
 
 	}
 

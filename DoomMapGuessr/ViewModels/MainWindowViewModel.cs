@@ -5,6 +5,7 @@ using Avalonia.Controls;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 
+using DoomMapGuessr.Strings;
 using DoomMapGuessr.Views;
 
 
@@ -13,6 +14,12 @@ namespace DoomMapGuessr.ViewModels
 
 	public partial class MainWindowViewModel : ViewModelBase
 	{
+
+		[ObservableProperty]
+		private UserControl currentPage;
+
+		[ObservableProperty]
+		private bool isSidebarOpen = true;
 
 		public MainWindowViewModel()
 		{
@@ -27,15 +34,9 @@ namespace DoomMapGuessr.ViewModels
 
 		}
 
-		[ObservableProperty]
-		private bool isSidebarOpen = true;
-
-		[ObservableProperty]
-		private UserControl currentPage;
-
 		[RelayCommand]
 		private void ChangeCulture(string culture) =>
-			Strings.Resources.Culture = culture switch
+			Resources.Culture = culture switch
 			{
 
 				"null" or "default" => CultureInfo.CurrentCulture,

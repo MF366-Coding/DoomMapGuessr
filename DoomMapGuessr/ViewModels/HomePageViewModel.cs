@@ -1,11 +1,6 @@
 ﻿namespace DoomMapGuessr.ViewModels
 {
 
-	public partial class HomePageViewModel : ViewModelBase
-	{
-
-		
-
-	}
+	public class HomePageViewModel : ViewModelBase { }
 
 }

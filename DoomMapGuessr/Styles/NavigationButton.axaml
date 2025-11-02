@@ -7,17 +7,17 @@
 				<Button Classes="primary">Primary Button</Button>
 				<Button Classes="destructive">Destructive Button</Button>
 				<Button Classes="nav-button">Nav Button (Only text)</Button>
-				<Button Classes="nav-button nav-icon">&#xe834;</Button>
-				<Button Classes="nav-button nav-icon">terminal map cached downloading</Button>
+				<Button Classes="nav-button icon">&#xe834;</Button>
+				<Button Classes="nav-button icon">terminal map cached downloading</Button>
 				<Button Classes="nav-button">
 					<TextBlock>
-						<Run Classes="nav-icon">&#xe834;</Run>
+						<Run Classes="icon">&#xe834;</Run>
 						<Run Classes="nav-text">Icon by Unicode Entry Point (e834)</Run>
 					</TextBlock>
 				</Button>
 				<Button Classes="nav-button">
 					<TextBlock>
-						<Run Classes="nav-icon">TERMINAL</Run>
+						<Run Classes="icon">TERMINAL</Run>
 						<Run Classes="nav-text">Icon by Name (terminal)</Run>
 					</TextBlock>
 				</Button>
@@ -36,7 +36,7 @@
 		<Setter Property="HorizontalContentAlignment" Value="Center" />
 	</Style>
 
-	<Style Selector="Button.nav-icon">
+	<Style Selector="Button.icon">
 		<Setter Property="FontFamily" Value="{StaticResource MaterialRounded}" />
 		<Setter Property="FontSize" Value="24" />
 		<Setter Property="FontWeight" Value="Bold" />
@@ -55,13 +55,13 @@
 		<Setter Property="TextAlignment" Value="Center" />
 	</Style>
 
-	<Style Selector="Run.nav-icon">
+	<Style Selector="Run.icon">
 		<Setter Property="FontFamily" Value="{StaticResource MaterialRounded}" />
 		<Setter Property="FontSize" Value="28" />
 		<Setter Property="FontWeight" Value="Bold" />
 	</Style>
 
-	<Style Selector="Run.nav-text">
+	<Style Selector="Run.icon-text">
 		<Setter Property="FontFamily" Value="Inter" />
 		<Setter Property="BaselineAlignment" Value="Center" />
 	</Style>

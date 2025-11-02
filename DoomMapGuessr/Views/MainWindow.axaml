@@ -8,7 +8,7 @@
         x:Class="DoomMapGuessr.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
-        Title="{x:Static strings:Resources.AppTitleName}">
+        Title="{x:Static strings:Resources.App_TitleName}">
 
 	<Design.DataContext>
 		<!-- This only sets the DataContext for the previewer in an IDE,
@@ -24,21 +24,23 @@
 		<SplitView.Pane>
 
 			<Grid RowDefinitions="Auto, Auto, *, Auto" Margin="8">
-				<Button Grid.Row="0" Classes="nav-button nav-icon" Command="{Binding NavigateCommand}" CommandParameter="ToggleSidebarPane">
+				<Button Grid.Row="0" Classes="nav-button icon" Command="{Binding NavigateCommand}"
+				        CommandParameter="ToggleSidebarPane">
 					&#xe5d2;
 				</Button>
 
 				<Button Grid.Row="1" Classes="nav-button" Command="{Binding NavigateCommand}" CommandParameter="Home">
 					<TextBlock>
-						<Run Classes="nav-icon">&#xe88a;</Run>
-						<Run Classes="nav-text" Text="{x:Static strings:Resources.Home}" />
+						<Run Classes="icon">&#xe88a;</Run>
+						<Run Classes="icon-text" Text="{x:Static strings:Resources.Home}" />
 					</TextBlock>
 				</Button>
 
-				<Button Grid.Row="2" Classes="nav-button" VerticalAlignment="Bottom" Command="{Binding NavigateCommand}" CommandParameter="Settings">
+				<Button Grid.Row="2" Classes="nav-button" VerticalAlignment="Bottom" Command="{Binding NavigateCommand}"
+				        CommandParameter="Settings">
 					<TextBlock>
-						<Run Classes="nav-icon">&#xe8b8;</Run>
-						<Run Classes="nav-text" Text="{x:Static strings:Resources.Settings}" />
+						<Run Classes="icon">&#xe8b8;</Run>
+						<Run Classes="icon-text" Text="{x:Static strings:Resources.Settings}" />
 					</TextBlock>
 				</Button>
 			</Grid>
