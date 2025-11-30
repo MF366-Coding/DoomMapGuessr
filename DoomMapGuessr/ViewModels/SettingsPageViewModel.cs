@@ -22,13 +22,23 @@ namespace DoomMapGuessr.ViewModels
 								   1;
 
 		[ObservableProperty]
+		private int proportions = Int32.TryParse(ApplicationSettings.Shared.Settings["Screenshots"]["Proportions"], out int result)
+									  ? (result is > 3 or < 0 // invalid result either ways lol
+											 ? 0
+											 : result)
+									  : 0;
+
+		[ObservableProperty]
 		private bool customTheme = ApplicationSettings.Shared.Settings["GUI"]["FollowSystem"] == "0";
 
 		[ObservableProperty]
 		private bool darkMode = ApplicationSettings.Shared.Settings["GUI"]["DarkMode"] == "1";
 
 		[ObservableProperty]
-		private string[] languageComboBoxItems = [ Resources.Settings_Language_FollowSystem, "English (USA)", "Português (Brasil)", "Português (Portugal)", "Slovenský (Slovensko)" ];
+		private string[] languageComboBoxItems =
+		[
+			Resources.Settings_Language_FollowSystem, "English (USA)", "Português (Brasil)", "Português (Portugal)", "Slovenský (Slovensko)"
+		];
 
 		private void RunLanguageChangeProtocol() =>
 			ApplicationSettings.Shared.Settings["Language"]["Culture"] = CurrentIndex == 0 // same as system

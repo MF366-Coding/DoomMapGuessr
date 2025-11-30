@@ -57,7 +57,7 @@
 						</StackPanel>
 						<TextBlock Classes="h3" Margin="24,8,0,8" Text="{x:Static strings:Resources.Settings_AspectRatio}" />
 						<StackPanel Orientation="Horizontal" Spacing="8">
-							<RadioButton Margin="48,0,0,0" VerticalAlignment="Center"
+							<RadioButton Margin="48,0,0,0" VerticalAlignment="Center" IsChecked=""
 							             Content="{x:Static strings:Resources.Settings_AspectRatio_MaintainProportions}" />
 							<RadioButton Margin="48,0,0,0" VerticalAlignment="Center">16:9</RadioButton>
 							<RadioButton Margin="48,0,0,0" VerticalAlignment="Center">4:3</RadioButton>
