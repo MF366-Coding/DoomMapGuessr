@@ -21,9 +21,12 @@
 						<Run Classes="nav-text">Icon by Name (terminal)</Run>
 					</TextBlock>
 				</Button>
-				<TextBlock>
-					A long text to demonstrate how the navigation button stretches.
-				</TextBlock>
+				<Button HorizontalAlignment="Right" Classes="primary" Padding="2">
+					<TextBlock>
+						<Run Classes="icon">save</Run>
+						<Run Classes="icon-text" Text="kkjkjhkh" />
+					</TextBlock>
+				</Button>
 			</StackPanel>
 		</Border>
 	</Design.PreviewWith>
@@ -38,7 +41,7 @@
 
 	<Style Selector="Button.icon">
 		<Setter Property="FontFamily" Value="{StaticResource MaterialRounded}" />
-		<Setter Property="FontSize" Value="24" />
+		<Setter Property="FontSize" Value="20" />
 		<Setter Property="FontWeight" Value="Bold" />
 	</Style>
 
@@ -57,7 +60,7 @@
 
 	<Style Selector="Run.icon">
 		<Setter Property="FontFamily" Value="{StaticResource MaterialRounded}" />
-		<Setter Property="FontSize" Value="28" />
+		<Setter Property="FontSize" Value="20" />
 		<Setter Property="FontWeight" Value="Bold" />
 	</Style>
 
