@@ -6,6 +6,10 @@
 
 	<Application.Resources>
 		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceInclude Source="avares://DoomMapGuessr/Styles/ColorsFonts.axaml" />
+			</ResourceDictionary.MergedDictionaries>
+
 			<!-- fonts -->
 			<FontFamily x:Key="MaterialRounded">
 				avares://DoomMapGuessr/Assets/Fonts/material-rounded.ttf#Material Symbols Rounded Regular
@@ -25,7 +29,7 @@
 		<FluentTheme />
 
 		<!-- Custom Styles -->
-		<StyleInclude Source="avares://DoomMapGuessr/Styles/NavigationButton.axaml" />
+		<StyleInclude Source="avares://DoomMapGuessr/Styles/Button.axaml" />
 		<StyleInclude Source="avares://DoomMapGuessr/Styles/Card.axaml" />
 		<StyleInclude Source="avares://DoomMapGuessr/Styles/TextStyles.axaml" />
 	</Application.Styles>

@@ -1,0 +1,44 @@
+{
+    "GeneralSettings": {
+        "NetProjectPath": "DoomMapGuessr.csproj",
+        "ApplicationName": {
+            "$type": "msbuild",
+            "property": "Title"
+        },
+        "Version": {
+            "$type": "msbuild",
+            "property": "ApplicationVersion"
+        },
+        "PackageName": {
+            "$type": "msbuild",
+            "property": "AssemblyName"
+        },
+        "AssemblyName": {
+            "$type": "msbuild",
+            "property": "AssemblyName"
+        }
+    },
+    "LinuxSettings": {
+        "CreateBinSymlink": "True"
+    },
+    "Win32Settings": {
+        "InstallerIcon": "Assets/full_icon_dark.ico",
+        "Company": "mf366.dev",
+        "CompanyFolder": "True",
+        "InstallerLicense": "../LICENSE.txt",
+        "InstallerRequiresAdmin": "False",
+        "IncludeUninstaller": "True"
+    },
+    "MacOsSettings": {
+        "CreateBundle": true,
+        "BundleIdentifier": "dev.mf366.DoomMapGuessr",
+        "SigningCredentialsType": "AdHoc"
+    },
+    "PublishSettings": {
+        "Configuration": "Release",
+        "PublishSingleFile": "True",
+        "PublishTrimmed": "True",
+        "PublishAot": "True",
+        "ExtraBuildProperties": {}
+    }
+}

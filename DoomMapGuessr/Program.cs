@@ -22,6 +22,9 @@ namespace DoomMapGuessr
 		[STAThread]
 		public static void Main(string[] args) =>
 			BuildAvaloniaApp()
+#if DEBUG
+				.WithDeveloperTools()
+#endif
 				.StartWithClassicDesktopLifetime(args);
 
 	}

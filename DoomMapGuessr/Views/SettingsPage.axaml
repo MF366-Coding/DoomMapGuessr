@@ -116,10 +116,10 @@
 				</Border>
 			</Grid>
 		</ScrollViewer>
-		<Button Grid.Row="2" Padding="4" Classes="primary" Margin="8" HorizontalAlignment="Right" Command="{Binding SaveSettingsCommand}">
+		<Button Grid.Row="2" Classes="primary" Margin="8" HorizontalAlignment="Right" Command="{Binding SaveSettingsCommand}">
 			<TextBlock Classes="body">
 				<Run Classes="icon">save</Run>
-				<Run Classes="icon-text" Text="{x:Static strings:Resources.Save}" />
+				<Run Classes="body" Text="{x:Static strings:Resources.Save}" />
 			</TextBlock>
 		</Button>
 	</Grid>

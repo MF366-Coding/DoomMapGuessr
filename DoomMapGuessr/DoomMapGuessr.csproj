@@ -6,6 +6,10 @@
 		<BuiltInComInteropSupport>true</BuiltInComInteropSupport>
 		<ApplicationManifest>app.manifest</ApplicationManifest>
 		<AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+
+		<Title>DoomMapGuessr</Title>
+		<ApplicationVersion>1.0.0</ApplicationVersion>
+		<SourceRevisionId></SourceRevisionId>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -48,6 +52,8 @@
 			<IncludeAssets Condition="'$(Configuration)' != 'Debug'">None</IncludeAssets>
 			<PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
 		</PackageReference>
+
+		<PackageReference Condition="'$(Configuration)' == 'Debug'" Include="AvaloniaUI.DiagnosticsSupport" Version="2.1.1" />
 
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
 
