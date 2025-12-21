@@ -370,3 +370,6 @@ _ReSharper*/
 *.DotSettings.user
 
 .idea/*
+
+# Distribution content
+[Dd]ist/

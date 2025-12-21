@@ -11,7 +11,7 @@
         },
         "PackageName": {
             "$type": "msbuild",
-            "property": "AssemblyName"
+            "property": "PackageTitle"
         },
         "AssemblyName": {
             "$type": "msbuild",
@@ -19,7 +19,13 @@
         }
     },
     "LinuxSettings": {
-        "CreateBinSymlink": "True"
+        "AppIcon": "Assets/full_icon_dark.ico",
+        "Maintainer": {
+            "$type": "msbuild",
+            "property": "Authors"
+        },
+        "CreateBinSymlink": "True",
+        "DesktopCategory": "Game"
     },
     "Win32Settings": {
         "InstallerIcon": "Assets/full_icon_dark.ico",
@@ -32,6 +38,8 @@
     "MacOsSettings": {
         "CreateBundle": true,
         "BundleIdentifier": "dev.mf366.DoomMapGuessr",
+        "BundleCategory": "Games",
+        "AppIcon": "Assets/full_icon_dark.ico",
         "SigningCredentialsType": "AdHoc"
     },
     "PublishSettings": {

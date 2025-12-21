@@ -8,7 +8,9 @@
 		<AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
 
 		<Title>DoomMapGuessr</Title>
+		<PackageTitle>matt-doommapguessr</PackageTitle>
 		<ApplicationVersion>1.0.0</ApplicationVersion>
+		<Authors>Matthew</Authors>
 		<SourceRevisionId></SourceRevisionId>
 	</PropertyGroup>
 
