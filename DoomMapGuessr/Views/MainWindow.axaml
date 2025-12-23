@@ -17,31 +17,31 @@
 	</Design.DataContext>
 
 	<SplitView IsPaneOpen="{Binding IsSidebarOpen}"
-	           OpenPaneLength="200"
-	           CompactPaneLength="54"
+	           OpenPaneLength="148"
+	           CompactPaneLength="46.5"
 	           DisplayMode="CompactInline">
 
 		<SplitView.Pane>
 
 			<Grid RowDefinitions="Auto, Auto, *, Auto" Margin="8">
-				<Button Grid.Row="0" Classes="nav-button icon" Command="{Binding NavigateCommand}"
+				<Button Grid.Row="0" Classes="nav" Command="{Binding NavigateCommand}"
 				        CommandParameter="ToggleSidebarPane">
-					&#xe5d2;
+					<TextBlock Classes="icon">&#xe5d2;</TextBlock>
 				</Button>
 
-				<Button Grid.Row="1" Classes="nav-button" Command="{Binding NavigateCommand}" CommandParameter="Home">
-					<TextBlock>
-						<Run Classes="icon">&#xe88a;</Run>
-						<Run Classes="icon-text" Text="{x:Static strings:Resources.Home}" />
-					</TextBlock>
+				<Button Grid.Row="1" Classes="nav" Command="{Binding NavigateCommand}" CommandParameter="Home">
+					<StackPanel>
+						<TextBlock Classes="icon">&#xe88a;</TextBlock>
+						<TextBlock Text="{x:Static strings:Resources.Home}" />
+					</StackPanel>
 				</Button>
 
-				<Button Grid.Row="2" Classes="nav-button" VerticalAlignment="Bottom" Command="{Binding NavigateCommand}"
+				<Button Grid.Row="2" Classes="nav" VerticalAlignment="Bottom" Command="{Binding NavigateCommand}"
 				        CommandParameter="Settings">
-					<TextBlock>
-						<Run Classes="icon">&#xe8b8;</Run>
-						<Run Classes="icon-text" Text="{x:Static strings:Resources.Settings}" />
-					</TextBlock>
+					<StackPanel>
+						<TextBlock Classes="icon">&#xe8b8;</TextBlock>
+						<TextBlock Text="{x:Static strings:Resources.Settings}" />
+					</StackPanel>
 				</Button>
 			</Grid>
 

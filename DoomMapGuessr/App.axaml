@@ -22,6 +22,10 @@
 			<FontFamily x:Key="MaterialSharp">
 				avares://DoomMapGuessr/Assets/Fonts/material-sharp.ttf#Material Symbols Sharp Regular
 			</FontFamily>
+
+			<FontFamily x:Key="CascadiaCode">
+				avares://DoomMapGuessr/Assets/Fonts/cascadia-code.ttf#Cascadia Code
+			</FontFamily>
 		</ResourceDictionary>
 	</Application.Resources>
 
@@ -29,9 +33,8 @@
 		<FluentTheme />
 
 		<!-- Custom Styles -->
-		<StyleInclude Source="avares://DoomMapGuessr/Styles/Button.axaml" />
+		<StyleInclude Source="avares://DoomMapGuessr/Styles/Controls.axaml" />
 		<StyleInclude Source="avares://DoomMapGuessr/Styles/Card.axaml" />
-		<StyleInclude Source="avares://DoomMapGuessr/Styles/TextStyles.axaml" />
 	</Application.Styles>
 
 </Application>

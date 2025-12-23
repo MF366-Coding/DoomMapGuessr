@@ -1,0 +1,324 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:c="using:DoomMapGuessr.Controls">
+	<Design.PreviewWith>
+		<Border Padding="20">
+			<Grid RowDefinitions="Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, Auto, Auto, Auto">
+				<StackPanel Grid.Column="0" Grid.Row="0" Margin="8" Orientation="Vertical" Spacing="4">
+					<TextBlock Classes="h1">Button</TextBlock>
+					<Button>Regular Button</Button>
+					<Button Classes="primary">Primary Button</Button>
+					<Button Classes="destructive">Destructive Button</Button>
+					<Button Classes="nav">Nav Button (Only text)</Button>
+					<Button Classes="nav"><TextBlock Classes="icon" Text="&#xe834;" /></Button>
+					<Button Classes="nav"><TextBlock Classes="icon" Text="terminal map cached downloading" /></Button>
+					<Button Classes="nav">
+						<StackPanel>
+							<TextBlock Classes="icon" Text="&#xe834;" />
+							<TextBlock Text="Icon by Unicode Entry Point (e834)"></TextBlock>
+						</StackPanel>
+					</Button>
+					<Button>
+						<StackPanel>
+							<TextBlock Classes="icon" Text="TERMINAL" />
+							<TextBlock Text="Icon by Name (terminal)" />
+						</StackPanel>
+					</Button>
+					<Button HorizontalAlignment="Right" Classes="primary">
+						<StackPanel>
+							<TextBlock Classes="icon" Text="save" />
+							<TextBlock Text="kkjkjhkh" />
+						</StackPanel>
+					</Button>
+				</StackPanel>
+
+				<StackPanel Grid.Column="0" Grid.Row="1" Margin="8" Orientation="Vertical" Spacing="4">
+					<TextBlock Classes="h1">ToggleButton</TextBlock>
+					<ToggleButton>Unchecked</ToggleButton>
+					<ToggleButton IsThreeState="True">Indeterminate</ToggleButton>
+					<ToggleButton IsChecked="True">Checked</ToggleButton>
+					<ToggleButton Classes="testhovereffect">Hover Style</ToggleButton>
+					<ToggleButton>
+						<StackPanel>
+							<TextBlock Classes="icon">&#xe644;</TextBlock>
+							<TextBlock Text="Do Not Disturb" />
+						</StackPanel>
+					</ToggleButton>
+					<ToggleButton IsThreeState="True">
+						<StackPanel>
+							<TextBlock Classes="icon">&#xeb4a;</TextBlock>
+							<TextBlock Text="Filter by Smoke-Free" />
+						</StackPanel>
+					</ToggleButton>
+				</StackPanel>
+
+
+
+				<StackPanel Grid.Column="1" Grid.Row="0" Margin="8" Orientation="Vertical" Spacing="4">
+					<TextBlock Classes="title">TextBlock</TextBlock>
+					<TextBlock Classes="h2">Heading 2</TextBlock>
+					<TextBlock Classes="h3">Heading 3</TextBlock>
+					<TextBlock>Regular Text</TextBlock>
+					<TextBlock Classes="caption">Caption Text</TextBlock>
+					<TextBlock Classes="small">Small Text</TextBlock>
+					<TextBlock Classes="disabled">This one has class "disabled", which means it's disabled</TextBlock>
+					<TextBlock IsEnabled="false">This one has "IsEnabled=false", which means it's disabled</TextBlock>
+					<TextBlock Classes="bold">Bold Text</TextBlock>
+					<TextBlock Classes="bold caption">Bold + Caption Combo</TextBlock>
+					<TextBlock Classes="light">Light Text</TextBlock>
+					<TextBlock Classes="light small">Light + Small Combo</TextBlock>
+					<TextBlock Classes="italic">Italic Text</TextBlock>
+					<TextBlock Classes="italic disabled">Italic + Disabled Combo</TextBlock>
+					<TextBlock>Ligature test =&gt; |&gt; ?? ?. !. -&gt; &gt;= &lt;= &lt;=&gt;</TextBlock>
+					<TextBlock Classes="mono">Ligature test =&gt; |&gt; ?? ?. !. -&gt; &gt;= &lt;= &lt;=&gt;</TextBlock>
+					<TextBlock Classes="code" Text="def two_int_sum(x: int, y: int) -> int:&#10;    return x + y" />
+				</StackPanel>
+
+				<StackPanel Grid.Column="1" Grid.Row="1" Margin="8" Orientation="Vertical" Spacing="4">
+					<TextBlock Classes="h1">TextBox</TextBlock>
+					<TextBox>Regular Text Box</TextBox>
+					<TextBox Watermark="Regular Text Box (watermark)"></TextBox>
+					<TextBox Classes="secret">password field</TextBox>
+					<TextBox Width="300" Classes="italic bold">Regular TextBlock formatting is available. By the way, these regular text boxes have word wrap enabled! Pretty good for when you have long text in such a short text box, like this one.</TextBox>
+					<TextBox Classes="code" Text="def this_is_code(x: int, y: int) -> int:&#10;    # this stupid function sums numbers&#10;    return x + y" />
+				</StackPanel>
+			</Grid>
+		</Border>
+	</Design.PreviewWith>
+
+
+	<!-- Button Styles -->
+	<Style Selector="Button">
+		<Setter Property="FontWeight" Value="{DynamicResource Font.IdealWeight}" />
+		<Setter Property="Foreground" Value="{DynamicResource Color.Text}" />
+		<Setter Property="FontSize" Value="14" />
+		<!-- Primary Button (not hovered) -->
+		<Style Selector="^.primary, ^[IsDefault=true]">
+			<Setter Property="Background" Value="{DynamicResource SystemAccentColor}" />
+
+			<Setter Property="Transitions">
+				<Transitions>
+					<BrushTransition Property="Background" Duration="0:0:0.4"/>
+				</Transitions>
+			</Setter>
+		</Style>
+		<!-- Destructive Button (not hovered) -->
+		<Style Selector="^.destructive">
+			<Setter Property="Background" Value="{DynamicResource Brush.Destructive}" />
+
+			<Setter Property="Transitions">
+				<Transitions>
+					<BrushTransition Property="Background" Duration="0:0:0.4"/>
+				</Transitions>
+			</Setter>
+		</Style>
+		<!-- Navigation Button (not hovered) -->
+		<Style Selector="^.nav">
+			<Setter Property="Background" Value="Transparent" />
+			<Setter Property="CornerRadius" Value="0" />
+			<Setter Property="HorizontalAlignment" Value="Stretch" />
+			<Setter Property="HorizontalContentAlignment" Value="Left" />
+			<Setter Property="MinHeight" Value="32" />
+
+			<Setter Property="Transitions">
+				<Transitions>
+					<BrushTransition Property="Background" Duration="0:0:0.4"/>
+				</Transitions>
+			</Setter>
+		</Style>
+	</Style>
+	<!-- Primary Button (hovered) -->
+	<Style Selector="Button.primary:pointerover /template/ ContentPresenter, Button[IsDefault=true]:pointerover /template/ ContentPresenter">
+		<Setter Property="Background" Value="{DynamicResource SystemAccentColorDark1}" />
+	</Style>
+	<!-- Destructive Button (hovered) -->
+	<Style Selector="Button.destructive:pointerover /template/ ContentPresenter">
+		<Setter Property="Background" Value="{DynamicResource Brush.DestructiveHover}" />
+	</Style>
+	<!-- Navigation Button (hovered) -->
+	<Style Selector="Button.nav:pointerover /template/ ContentPresenter">
+		<Setter Property="Background" Value="{DynamicResource SystemAccentColorDark3}" />
+	</Style>
+	<!-- Any Button Style with Icons -->
+	<Style Selector=":is(Button) > TextBlock.icon">
+		<Setter Property="HorizontalAlignment" Value="Center" />
+		<Setter Property="VerticalAlignment" Value="Center" />
+		<Setter Property="RenderTransform" Value="scale(1.5)" />
+	</Style>
+	<Style Selector=":is(Button) > StackPanel">
+		<Setter Property="Orientation" Value="Horizontal" />
+		<Setter Property="Spacing" Value="8" />
+		<Setter Property="HorizontalAlignment" Value="Center" />
+		<Setter Property="VerticalAlignment" Value="Center" />
+	</Style>
+	<Style Selector=":is(Button) > StackPanel > TextBlock.icon">
+		<Setter Property="HorizontalAlignment" Value="Center" />
+		<Setter Property="VerticalAlignment" Value="Center" />
+		<Setter Property="RenderTransform" Value="scale(1.5)" />
+	</Style>
+
+
+	<!-- TextBlock Styles -->
+	<Style Selector=":is(TextBlock)">
+		<Setter Property="Foreground" Value="{DynamicResource Color.Text}" />
+		<Setter Property="FontWeight" Value="{DynamicResource Font.IdealWeight}" />
+		<Setter Property="FontSize" Value="14" />
+		<!-- Heading 1 -->
+		<Style Selector="^.h1, ^.title">
+			<Setter Property="FontWeight" Value="Black" />
+			<Setter Property="FontSize" Value="28" />
+		</Style>
+		<!-- Heading 2 -->
+		<Style Selector="^.h2">
+			<Setter Property="FontWeight" Value="Bold" />
+			<Setter Property="FontSize" Value="24" />
+		</Style>
+		<!-- Heading 3 -->
+		<Style Selector="^.h3">
+			<Setter Property="FontWeight" Value="Bold" />
+			<Setter Property="FontSize" Value="20" />
+		</Style>
+		<!-- Caption Text -->
+		<Style Selector="^.caption, ^.small">
+			<Setter Property="FontWeight" Value="Normal" />
+			<Setter Property="FontSize" Value="10" />
+			<Setter Property="Foreground" Value="{DynamicResource Gray500}" />
+		</Style>
+		<!-- Disabled Text -->
+		<Style Selector="^.disabled, ^:disabled, ^[IsEnabled=false]">
+			<Setter Property="Foreground" Value="{DynamicResource Gray700}" />
+		</Style>
+		<!-- Bold Text -->
+		<Style Selector="^.bold">
+			<Setter Property="FontWeight" Value="Bold" />
+		</Style>
+		<!-- Light Text -->
+		<Style Selector="^.light">
+			<Setter Property="FontWeight" Value="Light" />
+		</Style>
+		<!-- Italic Text -->
+		<Style Selector="^.italic">
+			<Setter Property="FontStyle" Value="Italic" />
+		</Style>
+		<!-- Monospace Text -->
+		<Style Selector="^.mono, ^.code">
+			<Setter Property="FontFamily" Value="{StaticResource CascadiaCode}" />
+			<Setter Property="FontWeight" Value="Regular" />
+			<Setter Property="FontSize" Value="13" />
+			<Setter Property="LineSpacing" Value="1.4" />
+		</Style>
+		<!-- Icon -->
+		<Style Selector="^.icon">
+			<Setter Property="FontFamily" Value="{StaticResource MaterialSharp}" />
+			<Setter Property="FontWeight" Value="Bold" />
+		</Style>
+	</Style>
+	<!-- Icon (inside Run) -->
+	<Style Selector="TextBlock > Run.icon">
+		<Setter Property="FontFamily" Value="{StaticResource MaterialSharp}" />
+		<Setter Property="FontWeight" Value="Bold" />
+	</Style>
+
+
+	<!-- TextBox Styles -->
+	<Style Selector=":is(TextBox)">
+		<Setter Property="Foreground" Value="{DynamicResource Color.Text}" />
+		<Setter Property="FontWeight" Value="{DynamicResource Font.IdealWeight}" />
+		<Setter Property="FontSize" Value="14" />
+		<Setter Property="TextWrapping" Value="Wrap" />
+		<!-- Heading 1 -->
+		<Style Selector="^.h1, ^.title">
+			<Setter Property="FontWeight" Value="Black" />
+			<Setter Property="FontSize" Value="32" />
+		</Style>
+		<!-- Heading 2 -->
+		<Style Selector="^.h2">
+			<Setter Property="FontWeight" Value="Bold" />
+			<Setter Property="FontSize" Value="26" />
+		</Style>
+		<!-- Heading 3 -->
+		<Style Selector="^.h3">
+			<Setter Property="FontWeight" Value="Bold" />
+			<Setter Property="FontSize" Value="20" />
+		</Style>
+		<!-- Caption Text -->
+		<Style Selector="^.caption, ^.small">
+			<Setter Property="FontWeight" Value="Normal" />
+			<Setter Property="FontSize" Value="10" />
+			<Setter Property="Foreground" Value="{DynamicResource Gray500}" />
+		</Style>
+		<!-- Disabled Text -->
+		<Style Selector="^.disabled, ^:disabled, ^[IsEnabled=false]">
+			<Setter Property="Watermark">This text box is disabled.</Setter>
+			<Setter Property="Foreground" Value="{DynamicResource Gray700}" />
+		</Style>
+		<!-- Bold Text -->
+		<Style Selector="^.bold">
+			<Setter Property="FontWeight" Value="Bold" />
+		</Style>
+		<!-- Light Text -->
+		<Style Selector="^.light">
+			<Setter Property="FontWeight" Value="Light" />
+		</Style>
+		<!-- Italic Text -->
+		<Style Selector="^.italic">
+			<Setter Property="FontStyle" Value="Italic" />
+		</Style>
+		<!-- Monospace Text -->
+		<Style Selector="^.mono, ^.code">
+			<Setter Property="FontFamily" Value="{StaticResource CascadiaCode}" />
+			<Setter Property="FontWeight" Value="Regular" />
+			<Setter Property="FontSize" Value="13" />
+			<Setter Property="TextWrapping" Value="NoWrap" />
+			<Setter Property="TextAlignment" Value="Start" />
+			<Setter Property="AcceptsTab" Value="True" />
+			<Setter Property="AcceptsReturn" Value="True" />
+		</Style>
+		<!-- Password -->
+		<Style Selector="^.secret, ^.password">
+			<Setter Property="PasswordChar" Value="•" />
+		</Style>
+	</Style>
+
+
+	<!-- ToggleButton -->
+	<Style Selector=":is(ToggleButton)">
+		<Setter Property="FontWeight" Value="{DynamicResource Font.IdealWeight}" />
+		<Setter Property="CornerRadius" Value="50" />
+		<Setter Property="BorderThickness" Value="1" />
+		<Setter Property="BorderBrush" Value="{DynamicResource SystemAccentColorLight1}" />
+
+		<Setter Property="Transitions">
+			<Transitions>
+				<BrushTransition Property="Background" Duration="0:0:0.4"/>
+			</Transitions>
+		</Setter>
+		<!-- Unchecked -->
+		<Style Selector="^:unchecked /template/ ContentPresenter">
+			<Setter Property="Background" Value="Transparent" />
+		</Style>
+		<!-- Indeterminate -->
+		<Style Selector="^:indeterminate /template/ ContentPresenter">
+			<Setter Property="Background" Value="{DynamicResource SystemAccentColorDark2}" />
+			<Setter Property="BorderThickness" Value="1" />
+			<Setter Property="BorderBrush" Value="{DynamicResource SystemAccentColorLight1}" />
+		</Style>
+		<!-- Checked -->
+		<Style Selector="^:checked /template/ ContentPresenter">
+			<Setter Property="Background" Value="{DynamicResource SystemAccentColor}" />
+			<Setter Property="BorderThickness" Value="1" />
+			<Setter Property="BorderBrush" Value="Transparent" />
+		</Style>
+		<!-- Hover -->
+		<Style Selector="^:pointerover /template/ ContentPresenter">
+			<Setter Property="Background" Value="{DynamicResource Gray800}" />
+			<Setter Property="BorderThickness" Value="1" />
+			<Setter Property="BorderBrush" Value="Transparent" />
+		</Style>
+		<Style Selector="^.testhovereffect /template/ ContentPresenter">
+			<Setter Property="Background" Value="{DynamicResource Gray800}" />
+			<Setter Property="BorderThickness" Value="1" />
+			<Setter Property="BorderBrush" Value="Transparent" />
+		</Style>
+	</Style>
+</Styles>

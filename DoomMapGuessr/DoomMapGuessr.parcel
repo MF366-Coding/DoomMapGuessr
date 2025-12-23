@@ -44,7 +44,6 @@
     },
     "PublishSettings": {
         "Configuration": "Release",
-        "PublishSingleFile": "True",
         "PublishTrimmed": "True",
         "PublishAot": "True",
         "ExtraBuildProperties": {}

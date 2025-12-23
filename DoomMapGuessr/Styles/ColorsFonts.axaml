@@ -6,10 +6,10 @@
 		<Border Padding="20">
 			<Grid ColumnDefinitions="Auto, Auto, Auto, Auto, Auto" RowDefinitions="Auto, Auto, Auto, Auto, Auto">
 				<Button Grid.Column="0" Grid.Row="0" Width="20" Height="20"></Button>
-				<Button Grid.Column="0" Grid.Row="1" Width="20" Height="20" Background="{DynamicResource Brush.Primary}"></Button>
-				<Button Grid.Column="0" Grid.Row="2" Width="20" Height="20" Background="{DynamicResource Brush.PrimaryHover}"></Button>
-				<Button Grid.Column="0" Grid.Row="3" Width="20" Height="20" Background="{DynamicResource Brush.Destructive}"></Button>
-				<Button Grid.Column="0" Grid.Row="4" Width="20" Height="20" Background="{DynamicResource Brush.DestructiveHover}"></Button>
+				<Button Grid.Column="0" Grid.Row="1" Width="20" Height="20" Background="{DynamicResource CoralishRed}"></Button>
+				<Button Grid.Column="0" Grid.Row="2" Width="20" Height="20" Background="{DynamicResource Red}"></Button>
+				<Button Grid.Column="0" Grid.Row="3" Width="20" Height="20" Background="{DynamicResource DarkRed}"></Button>
+				<Button Grid.Column="0" Grid.Row="4" Width="20" Height="20" Background="{DynamicResource DarkerRed}"></Button>
 
 				<Button Grid.Column="1" Grid.Row="0" Width="20" Height="20" Background="{DynamicResource Color.Text}"></Button>
 				<Button Grid.Column="1" Grid.Row="1" Width="20" Height="20" Background="{DynamicResource Color.TextAlt}"></Button>
@@ -42,9 +42,6 @@
 	<ResourceDictionary.ThemeDictionaries>
 		<!-- Light Theme -->
 		<ResourceDictionary x:Key="Light">
-			<SolidColorBrush x:Key="Brush.Primary" Color="{DynamicResource SystemAccentColorDark1}" />
-			<SolidColorBrush x:Key="Brush.PrimaryHover" Color="{DynamicResource SystemAccentColorDark2}" />
-
 			<SolidColorBrush x:Key="Brush.Destructive" Color="{DynamicResource DarkRed}" />
 			<SolidColorBrush x:Key="Brush.DestructiveHover" Color="{DynamicResource DarkerRed}" />
 
@@ -62,15 +59,13 @@
 			<SolidColorBrush x:Key="Brush.Gray900" Color="{StaticResource Gray900}" />
 
 			<!-- Fonts -->
-			<System:Int32 x:Key="Font.IdealWeight">400</System:Int32>
+			<System:Int32 x:Key="Font.IdealWeight">350</System:Int32>
+			<System:Int32 x:Key="Font.IdealWeightPlus">450</System:Int32>
 		</ResourceDictionary>
 
 		<!-- Dark Theme -->
 		<ResourceDictionary x:Key="Dark">
-			<SolidColorBrush x:Key="Brush.Primary" Color="{DynamicResource SystemAccentColorLight1}" />
-			<SolidColorBrush x:Key="Brush.PrimaryHover" Color="{DynamicResource SystemAccentColor}" />
-
-			<SolidColorBrush x:Key="Brush.Destructive" Color="{DynamicResource CoralishRed}" />
+			<SolidColorBrush x:Key="Brush.Destructive" Color="{DynamicResource Red}" />
 			<SolidColorBrush x:Key="Brush.DestructiveHover" Color="{DynamicResource DarkRed}" />
 
 			<Color x:Key="Color.Text">#FFFFFF</Color>
@@ -87,12 +82,13 @@
 			<SolidColorBrush x:Key="Brush.Gray900" Color="{StaticResource Gray100}" />
 
 			<!-- Fonts -->
-			<System:Int32 x:Key="Font.IdealWeight">500</System:Int32>
+			<System:Int32 x:Key="Font.IdealWeight">450</System:Int32>
+			<System:Int32 x:Key="Font.IdealWeightPlus">550</System:Int32>
 		</ResourceDictionary>
 	</ResourceDictionary.ThemeDictionaries>
 
 	<!-- Theme-unaware brushes -->
-	<SolidColorBrush x:Key="Brush.Red" Color="{StaticResource Red}" />
+	<SolidColorBrush x:Key="Brush.PureRed" Color="{StaticResource Red}" />
 	<SolidColorBrush x:Key="Brush.Green" Color="{StaticResource Green}" />
 	<SolidColorBrush x:Key="Brush.Blue" Color="{StaticResource Blue}" />
 	<SolidColorBrush x:Key="Brush.Yellow" Color="{StaticResource Yellow}" />
@@ -103,7 +99,7 @@
 	<SolidColorBrush x:Key="Brush.Black" Color="{StaticResource Black}" />
 
 	<!-- Theme-unaware colors -->
-	<Color x:Key="Red">#FF0000</Color>
+	<Color x:Key="PureRed">#FF0000</Color>
 	<Color x:Key="Green">#00FF00</Color>
 	<Color x:Key="Blue">#0000FF</Color>
 	<Color x:Key="Yellow">#FFFF00</Color>
@@ -111,6 +107,7 @@
 	<Color x:Key="Magenta">#FF00FF</Color>
 
 	<Color x:Key="CoralishRed">#FC5050</Color>
+	<Color x:Key="Red">#E81212</Color>
 	<Color x:Key="DarkRed">#C41B1B</Color>
 	<Color x:Key="DarkerRed">#7C0E0E</Color>
 
