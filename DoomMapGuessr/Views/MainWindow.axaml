@@ -17,13 +17,13 @@
 	</Design.DataContext>
 
 	<SplitView IsPaneOpen="{Binding IsSidebarOpen}"
-	           OpenPaneLength="148"
+	           OpenPaneLength="250"
 	           CompactPaneLength="46.5"
 	           DisplayMode="CompactInline">
 
 		<SplitView.Pane>
 
-			<Grid RowDefinitions="Auto, Auto, *, Auto" Margin="8">
+			<Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, *" Margin="8">
 				<Button Grid.Row="0" Classes="nav" Command="{Binding NavigateCommand}"
 				        CommandParameter="ToggleSidebarPane">
 					<TextBlock Classes="icon">&#xe5d2;</TextBlock>
@@ -36,7 +36,28 @@
 					</StackPanel>
 				</Button>
 
-				<Button Grid.Row="2" Classes="nav" VerticalAlignment="Bottom" Command="{Binding NavigateCommand}"
+				<Button Grid.Row="2" Classes="nav" Command="{Binding NavigateCommand}" CommandParameter="GuesserMode">
+					<StackPanel>
+						<TextBlock Classes="icon">&#xe86c;</TextBlock>
+						<TextBlock Text="{x:Static strings:Resources.GuesserMode}" />
+					</StackPanel>
+				</Button>
+
+				<Button Grid.Row="3" Classes="nav" Command="{Binding NavigateCommand}" CommandParameter="GeoMode">
+					<StackPanel>
+						<TextBlock Classes="icon">&#xe0c8;</TextBlock>
+						<TextBlock Text="{x:Static strings:Resources.GeoMode}" />
+					</StackPanel>
+				</Button>
+
+				<Button Grid.Row="4" Classes="nav" Command="{Binding NavigateCommand}" CommandParameter="AchievementsUnlockables">
+					<StackPanel>
+						<TextBlock Classes="icon">&#xe71a;</TextBlock>
+						<TextBlock Text="{x:Static strings:Resources.AchievementsUnlockables}" />
+					</StackPanel>
+				</Button>
+
+				<Button Grid.Row="5" Classes="nav" VerticalAlignment="Bottom" Command="{Binding NavigateCommand}"
 				        CommandParameter="Settings">
 					<StackPanel>
 						<TextBlock Classes="icon">&#xe8b8;</TextBlock>

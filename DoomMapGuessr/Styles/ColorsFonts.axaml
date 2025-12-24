@@ -3,7 +3,7 @@
 					xmlns:System="using:System">
 	<!-- Designer Preview -->
 	<Design.PreviewWith>
-		<Border Padding="20">
+		<Border Padding="10">
 			<Grid ColumnDefinitions="Auto, Auto, Auto, Auto, Auto" RowDefinitions="Auto, Auto, Auto, Auto, Auto">
 				<Button Grid.Column="0" Grid.Row="0" Width="20" Height="20"></Button>
 				<Button Grid.Column="0" Grid.Row="1" Width="20" Height="20" Background="{DynamicResource CoralishRed}"></Button>
@@ -42,8 +42,8 @@
 	<ResourceDictionary.ThemeDictionaries>
 		<!-- Light Theme -->
 		<ResourceDictionary x:Key="Light">
-			<SolidColorBrush x:Key="Brush.Destructive" Color="{DynamicResource DarkRed}" />
-			<SolidColorBrush x:Key="Brush.DestructiveHover" Color="{DynamicResource DarkerRed}" />
+			<SolidColorBrush x:Key="Brush.Destructive" Color="{DynamicResource CoralishRed}" />
+			<SolidColorBrush x:Key="Brush.DestructiveHover" Color="{DynamicResource PastelRed}" />
 
 			<Color x:Key="Color.Text">#000000</Color>
 			<Color x:Key="Color.TextAlt">#FFFFFF</Color>
@@ -58,9 +58,14 @@
 			<SolidColorBrush x:Key="Brush.Gray800" Color="{StaticResource Gray800}" />
 			<SolidColorBrush x:Key="Brush.Gray900" Color="{StaticResource Gray900}" />
 
+			<SolidColorBrush x:Key="Brush.GrayHover" Color="{StaticResource Gray500}" />
+
+			<SolidColorBrush x:Key="Brush.PrimaryHover" Color="{StaticResource SystemAccentColorLight1}" />
+			<SolidColorBrush x:Key="Brush.PrimaryHoverIntense" Color="{StaticResource SystemAccentColorLight3}" />
+
 			<!-- Fonts -->
-			<System:Int32 x:Key="Font.IdealWeight">350</System:Int32>
-			<System:Int32 x:Key="Font.IdealWeightPlus">450</System:Int32>
+			<System:Int32 x:Key="Font.IdealWeight">400</System:Int32>
+			<System:Int32 x:Key="Font.IdealWeightPlus">500</System:Int32>
 		</ResourceDictionary>
 
 		<!-- Dark Theme -->
@@ -80,6 +85,11 @@
 			<SolidColorBrush x:Key="Brush.Gray700" Color="{StaticResource Gray300}" />
 			<SolidColorBrush x:Key="Brush.Gray800" Color="{StaticResource Gray200}" />
 			<SolidColorBrush x:Key="Brush.Gray900" Color="{StaticResource Gray100}" />
+
+			<SolidColorBrush x:Key="Brush.GrayHover" Color="{StaticResource Gray800}" />
+
+			<SolidColorBrush x:Key="Brush.PrimaryHover" Color="{StaticResource SystemAccentColorDark1}" />
+			<SolidColorBrush x:Key="Brush.PrimaryHoverIntense" Color="{StaticResource SystemAccentColorDark3}" />
 
 			<!-- Fonts -->
 			<System:Int32 x:Key="Font.IdealWeight">450</System:Int32>
@@ -106,6 +116,7 @@
 	<Color x:Key="Cyan">#00FFFF</Color>
 	<Color x:Key="Magenta">#FF00FF</Color>
 
+	<Color x:Key="PastelRed">#FF7777</Color>
 	<Color x:Key="CoralishRed">#FC5050</Color>
 	<Color x:Key="Red">#E81212</Color>
 	<Color x:Key="DarkRed">#C41B1B</Color>

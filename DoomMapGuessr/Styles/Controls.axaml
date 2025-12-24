@@ -129,7 +129,7 @@
 	</Style>
 	<!-- Primary Button (hovered) -->
 	<Style Selector="Button.primary:pointerover /template/ ContentPresenter, Button[IsDefault=true]:pointerover /template/ ContentPresenter">
-		<Setter Property="Background" Value="{DynamicResource SystemAccentColorDark1}" />
+		<Setter Property="Background" Value="{DynamicResource Brush.PrimaryHover}" />
 	</Style>
 	<!-- Destructive Button (hovered) -->
 	<Style Selector="Button.destructive:pointerover /template/ ContentPresenter">
@@ -137,7 +137,7 @@
 	</Style>
 	<!-- Navigation Button (hovered) -->
 	<Style Selector="Button.nav:pointerover /template/ ContentPresenter">
-		<Setter Property="Background" Value="{DynamicResource SystemAccentColorDark3}" />
+		<Setter Property="Background" Value="{DynamicResource Brush.PrimaryHoverIntense}" />
 	</Style>
 	<!-- Any Button Style with Icons -->
 	<Style Selector=":is(Button) > TextBlock.icon">
@@ -182,7 +182,7 @@
 		<Style Selector="^.caption, ^.small">
 			<Setter Property="FontWeight" Value="Normal" />
 			<Setter Property="FontSize" Value="10" />
-			<Setter Property="Foreground" Value="{DynamicResource Gray500}" />
+			<Setter Property="Foreground" Value="{DynamicResource Brush.Gray500}" />
 		</Style>
 		<!-- Disabled Text -->
 		<Style Selector="^.disabled, ^:disabled, ^[IsEnabled=false]">
@@ -203,8 +203,8 @@
 		<!-- Monospace Text -->
 		<Style Selector="^.mono, ^.code">
 			<Setter Property="FontFamily" Value="{StaticResource CascadiaCode}" />
-			<Setter Property="FontWeight" Value="Regular" />
-			<Setter Property="FontSize" Value="13" />
+			<Setter Property="FontWeight" Value="SemiBold" />
+			<Setter Property="FontSize" Value="14" />
 			<Setter Property="LineSpacing" Value="1.4" />
 		</Style>
 		<!-- Icon -->
@@ -245,7 +245,7 @@
 		<Style Selector="^.caption, ^.small">
 			<Setter Property="FontWeight" Value="Normal" />
 			<Setter Property="FontSize" Value="10" />
-			<Setter Property="Foreground" Value="{DynamicResource Gray500}" />
+			<Setter Property="Foreground" Value="{DynamicResource Brush.Gray500}" />
 		</Style>
 		<!-- Disabled Text -->
 		<Style Selector="^.disabled, ^:disabled, ^[IsEnabled=false]">
@@ -267,8 +267,8 @@
 		<!-- Monospace Text -->
 		<Style Selector="^.mono, ^.code">
 			<Setter Property="FontFamily" Value="{StaticResource CascadiaCode}" />
-			<Setter Property="FontWeight" Value="Regular" />
-			<Setter Property="FontSize" Value="13" />
+			<Setter Property="FontWeight" Value="SemiBold" />
+			<Setter Property="FontSize" Value="14" />
 			<Setter Property="TextWrapping" Value="NoWrap" />
 			<Setter Property="TextAlignment" Value="Start" />
 			<Setter Property="AcceptsTab" Value="True" />
@@ -282,7 +282,7 @@
 
 
 	<!-- ToggleButton -->
-	<Style Selector=":is(ToggleButton)">
+	<Style Selector="ToggleButton">
 		<Setter Property="FontWeight" Value="{DynamicResource Font.IdealWeight}" />
 		<Setter Property="CornerRadius" Value="50" />
 		<Setter Property="BorderThickness" Value="1" />
@@ -311,12 +311,12 @@
 		</Style>
 		<!-- Hover -->
 		<Style Selector="^:pointerover /template/ ContentPresenter">
-			<Setter Property="Background" Value="{DynamicResource Gray800}" />
+			<Setter Property="Background" Value="{DynamicResource Brush.GrayHover}" />
 			<Setter Property="BorderThickness" Value="1" />
 			<Setter Property="BorderBrush" Value="Transparent" />
 		</Style>
 		<Style Selector="^.testhovereffect /template/ ContentPresenter">
-			<Setter Property="Background" Value="{DynamicResource Gray800}" />
+			<Setter Property="Background" Value="{DynamicResource Brush.GrayHover}" />
 			<Setter Property="BorderThickness" Value="1" />
 			<Setter Property="BorderBrush" Value="Transparent" />
 		</Style>
