@@ -1,0 +1,5 @@
+# Ignore db-convert.py auxiliary file
+# This file was used to convert the old db format (JSON)
+# to SQL btw.
+# shit
+[Dd][Bb]-convert.py
