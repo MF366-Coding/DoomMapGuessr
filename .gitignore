@@ -369,7 +369,8 @@ _ReSharper*/
 *.[Rr]e[Ss]harper
 *.DotSettings.user
 
-.idea/*
+# JetBrains
+.idea/
 
 # Distribution content
 [Dd]ist/
