@@ -4,11 +4,11 @@
 namespace DoomMapGuessr.Views
 {
 
-	public partial class SettingsPage : UserControl
-	{
+    public partial class SettingsPage : UserControl
+    {
 
-		public SettingsPage() { InitializeComponent(); }
+        public SettingsPage() { InitializeComponent(); }
 
-	}
+    }
 
 }

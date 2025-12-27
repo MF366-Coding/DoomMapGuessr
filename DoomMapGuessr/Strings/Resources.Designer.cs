@@ -193,6 +193,15 @@ namespace DoomMapGuessr.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No connection available.
+        /// </summary>
+        public static string NoConnection {
+            get {
+                return ResourceManager.GetString("NoConnection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Remove.
         /// </summary>
         public static string Remove {
@@ -207,6 +216,15 @@ namespace DoomMapGuessr.Strings {
         public static string RemoveAll {
             get {
                 return ResourceManager.GetString("RemoveAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Retry.
+        /// </summary>
+        public static string Retry {
+            get {
+                return ResourceManager.GetString("Retry", resourceCulture);
             }
         }
         

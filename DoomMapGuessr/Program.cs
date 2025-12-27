@@ -6,27 +6,27 @@ using Avalonia;
 namespace DoomMapGuessr
 {
 
-	internal sealed class Program
-	{
+    internal sealed class Program
+    {
 
-		// Avalonia configuration, don't remove; also used by visual designer.
-		public static AppBuilder BuildAvaloniaApp() =>
-			AppBuilder.Configure<App>()
-					  .UsePlatformDetect()
-					  .WithInterFont()
-					  .LogToTrace();
+        // Avalonia configuration, don't remove; also used by visual designer.
+        public static AppBuilder BuildAvaloniaApp() =>
+            AppBuilder.Configure<App>()
+                      .UsePlatformDetect()
+                      .WithInterFont()
+                      .LogToTrace();
 
-		// Initialization code. Don't use any Avalonia, third-party APIs or any
-		// SynchronizationContext-reliant code before AppMain is called: things aren't initialized
-		// yet and stuff might break.
-		[STAThread]
-		public static void Main(string[] args) =>
-			BuildAvaloniaApp()
+        // Initialization code. Don't use any Avalonia, third-party APIs or any
+        // SynchronizationContext-reliant code before AppMain is called: things aren't initialized
+        // yet and stuff might break.
+        [STAThread]
+        public static void Main(string[] args) =>
+            BuildAvaloniaApp()
 #if DEBUG
-				.WithDeveloperTools()
+                .WithDeveloperTools()
 #endif
-				.StartWithClassicDesktopLifetime(args);
+                .StartWithClassicDesktopLifetime(args);
 
-	}
+    }
 
 }

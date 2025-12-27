@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:DoomMapGuessr.ViewModels"
              xmlns:strings="clr-namespace:DoomMapGuessr.Strings"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             mc:Ignorable="d" d:DesignWidth="1030" d:DesignHeight="720"
              x:Class="DoomMapGuessr.Views.SettingsPage"
              x:DataType="vm:SettingsPageViewModel">
 	<Design.DataContext>

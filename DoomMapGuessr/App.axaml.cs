@@ -19,7 +19,7 @@ namespace DoomMapGuessr
 	public class App : Application
 	{
 
-		public static readonly string[] allowedCultures = [ "en-US", "pt-br", "pt-PT", "sk-sk" ];
+		public static readonly string[] allowedCultures = ["en-US", "pt-br", "pt-PT", "sk-sk"];
 		public static readonly string systemCulture = CultureInfo.CurrentCulture.Name;
 
 		private static void DisableAvaloniaDataAnnotationValidation()
@@ -30,7 +30,7 @@ namespace DoomMapGuessr
 
 			// remove each entry found
 			foreach (var plugin in dataValidationPluginsToRemove)
-				BindingPlugins.DataValidators.Remove(plugin);
+                _ = BindingPlugins.DataValidators.Remove(plugin);
 
 		}
 
