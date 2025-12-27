@@ -7,7 +7,7 @@
         mc:Ignorable="d" d:DesignWidth="1280" d:DesignHeight="710"
         x:Class="DoomMapGuessr.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
-        Icon="/Assets/IconDark.ico"
+        Icon="/Assets/Icon.ico"
         Title="{x:Static strings:Resources.App_TitleName}">
 
 	<Design.DataContext>

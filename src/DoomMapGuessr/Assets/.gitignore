@@ -1,0 +1,11 @@
+# Ignore GIMP, Krita and Paint.NET files
+*.xfc
+*.pdn
+*.kra
+
+# Ignore backups
+*.kra~
+*~
+
+# Ignore old assets
+[Oo]ld[Aa]ssets/
