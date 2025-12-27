@@ -1,22 +1,27 @@
 ﻿<Styles xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 	<Design.PreviewWith>
 		<Border Padding="20">
-			<Border Classes="card">
-				<StackPanel Orientation="Vertical" Spacing="4">
-					<StackPanel Orientation="Horizontal" Spacing="4">
-						<TextBlock Classes="h2" FontFamily="{StaticResource MaterialRounded}">globe</TextBlock>
-						<TextBlock Classes="h2">Language</TextBlock>
+			<StackPanel Orientation="Vertical" Spacing="10">
+				<Border Classes="card">
+					<StackPanel Orientation="Vertical" Spacing="4">
+						<StackPanel Orientation="Horizontal" Spacing="4">
+							<TextBlock Classes="h2" FontFamily="{StaticResource MaterialRounded}">globe</TextBlock>
+							<TextBlock Classes="h2">Language</TextBlock>
+						</StackPanel>
+						<TextBlock>This is demo text.</TextBlock>
 					</StackPanel>
-					<TextBlock>This is demo text.</TextBlock>
-				</StackPanel>
-			</Border>
+				</Border>
+				<Rectangle Classes="card" Height="200">
+					<Rectangle.Fill>Red</Rectangle.Fill>
+				</Rectangle>
+			</StackPanel>
 		</Border>
 	</Design.PreviewWith>
 
 	<Style Selector="Border.card">
 		<Setter Property="CornerRadius" Value="10" />
-		<Setter Property="Background" Value="{DynamicResource ButtonBackgroundPointerOver}" />
+		<Setter Property="Background" Value="{DynamicResource Brush.Gray100}" />
 		<Setter Property="BorderThickness" Value="8" />
 		<Setter Property="Padding" Value="8" />
 	</Style>

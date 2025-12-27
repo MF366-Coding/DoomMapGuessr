@@ -37,7 +37,7 @@ namespace DoomMapGuessr.ViewModels
 		[ObservableProperty]
 		private string[] languageComboBoxItems =
 		[
-			Resources.Settings_Language_FollowSystem, "English (USA)", "Português (Brasil)", "Português (Portugal)", "Slovenský (Slovensko)"
+			Resources.Settings_Language_FollowSystem, "English (USA)", "Português (Brasil)", "Português (Portugal)"
 		];
 
 		private void RunLanguageChangeProtocol() =>

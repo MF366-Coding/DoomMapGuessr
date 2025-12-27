@@ -8,6 +8,7 @@
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
 				<ResourceInclude Source="avares://DoomMapGuessr/Styles/ColorsFonts.axaml" />
+				<ResourceInclude Source="avares://DoomMapGuessr/Styles/MaterialSymbols.axaml" />
 			</ResourceDictionary.MergedDictionaries>
 
 			<!-- fonts -->

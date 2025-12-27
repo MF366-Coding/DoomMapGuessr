@@ -207,4 +207,16 @@
   <data name="AchievementsUnlockables" xml:space="preserve">
     <value>Achievements &amp; Items</value>
   </data>
+  <data name="Flavor_Unlockables" xml:space="preserve">
+    <value>Your Items</value>
+  </data>
+  <data name="Flavor_Unlockables_Description" xml:space="preserve">
+    <value>Watch your achievements
+turn into items!
+The more you play,
+the more you get!
+From backgrounds to
+game modes, it's rip
+and tear until it is done.</value>
+  </data>
 </root>

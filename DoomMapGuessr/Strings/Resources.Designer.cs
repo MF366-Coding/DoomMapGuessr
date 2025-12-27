@@ -124,6 +124,30 @@ namespace DoomMapGuessr.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Your Items.
+        /// </summary>
+        public static string Flavor_Unlockables {
+            get {
+                return ResourceManager.GetString("Flavor_Unlockables", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Watch your achievements
+        ///turn into items!
+        ///The more you play,
+        ///the more you get!
+        ///From backgrounds to
+        ///game modes, it&apos;s rip
+        ///and tear until it is done..
+        /// </summary>
+        public static string Flavor_Unlockables_Description {
+            get {
+                return ResourceManager.GetString("Flavor_Unlockables_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Coordinate Mode.
         /// </summary>
         public static string GeoMode {

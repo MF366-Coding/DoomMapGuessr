@@ -19,7 +19,7 @@
         }
     },
     "LinuxSettings": {
-        "AppIcon": "Assets/full_icon_dark.ico",
+        "AppIcon": "Assets/IconDark.ico",
         "Maintainer": {
             "$type": "msbuild",
             "property": "Authors"
@@ -28,7 +28,7 @@
         "DesktopCategory": "Game"
     },
     "Win32Settings": {
-        "InstallerIcon": "Assets/full_icon_dark.ico",
+        "InstallerIcon": "Assets/IconDark.ico",
         "Company": "mf366.dev",
         "CompanyFolder": "True",
         "InstallerLicense": "../LICENSE.txt",
@@ -39,7 +39,7 @@
         "CreateBundle": true,
         "BundleIdentifier": "dev.mf366.DoomMapGuessr",
         "BundleCategory": "Games",
-        "AppIcon": "Assets/full_icon_dark.ico",
+        "AppIcon": "Assets/IconDark.ico",
         "SigningCredentialsType": "AdHoc"
     },
     "PublishSettings": {
